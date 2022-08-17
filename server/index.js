@@ -12,7 +12,7 @@ const app = express()
 const server = createServer(app)
 const io = new SocketServer(server, {
   cors: {
-    origin: 'http://localhost:5173',
+    // origin: 'http://localhost:5173',
   },
 })
 
