@@ -1,0 +1,24 @@
+{
+  "name": "react-express-socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run --prefix client build",
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "Fredy Romero <romeroespinoza.fp@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.18.1",
+    "morgan": "1.10.0",
+    "socket.io": "4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.19"
+  }
+}
