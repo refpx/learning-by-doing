@@ -25,6 +25,9 @@ func main() {
 
 	app := fiber.New()
 
+	// Create a docker container with mongoDB and run it
+	// docker run --name gomongodb -p 27017:27017 -d mongo
+
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017/gomongodb"))
 
 	if err != nil {
