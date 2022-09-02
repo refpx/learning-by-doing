@@ -16,5 +16,6 @@
 - Arithmetic operators
 - Tipos de datos primitivos
 - Paquete `fmt`
+- Uso de funciones y funciones anónimas
 
 <p align="right">(<a href="#top">back to top</a>)</p>

@@ -117,29 +117,66 @@
 
 // 5. Paquete fmt
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// fmt.Println -> Imprime un valor y agrega un salto de línea
+// 	helloMessage := "Hello"
+// 	worldMessage := "World"
+// 	fmt.Println(helloMessage, worldMessage)
+
+// 	// fmt.Printf -> %v = valor, %s = string, %d = int, %f = float, %t = bool
+// 	name := "Fredy"
+// 	age := 25
+// 	fmt.Printf("%s tiene %d años\n", name, age)
+// 	fmt.Printf("%v tiene %v años\n", name, age)
+
+// 	// fmt.Sprintf -> Guardar el resultado de un Printf en una variable
+// 	message := fmt.Sprintf("%s tiene %d años", name, age)
+// 	fmt.Println(message)
+
+// 	// Obtener el tipo de una variable
+// 	fmt.Printf("helloMessage: %T\n", helloMessage)
+// 	fmt.Printf("age: %T\n", age)
+// }
+
+// ================================================
+
+// 6. Uso de funciones y funciones anónimas
+
 package main
 
 import "fmt"
 
-func main() {
-	// fmt.Println -> Imprime un valor y agrega un salto de línea
-	helloMessage := "Hello"
-	worldMessage := "World"
-	fmt.Println(helloMessage, worldMessage)
-
-	// fmt.Printf -> %v = valor, %s = string, %d = int, %f = float, %t = bool
-	name := "Fredy"
-	age := 25
-	fmt.Printf("%s tiene %d años\n", name, age)
-	fmt.Printf("%v tiene %v años\n", name, age)
-
-	// fmt.Sprintf -> Guardar el resultado de un Printf en una variable
-	message := fmt.Sprintf("%s tiene %d años", name, age)
+func normalFunction(message string) {
 	fmt.Println(message)
+}
 
-	// Obtener el tipo de una variable
-	fmt.Printf("helloMessage: %T\n", helloMessage)
-	fmt.Printf("age: %T\n", age)
+func tripleArgument(x, y int, z string) {
+	fmt.Println(x, y, z)
+}
+
+func returnValue(x int) int {
+	return x * 3
+}
+
+func doubleReturn(x int) (y, z int) {
+	return x * 2, x * 3
+}
+
+func main() {
+	normalFunction("Hola mundo!")
+	tripleArgument(1, 2, "Hola")
+
+	value1 := returnValue(3)
+	fmt.Println("Value 1:", value1)
+
+	// value2, value3 := doubleReturn(3)
+	value2, _ := doubleReturn(3)
+	fmt.Println("Value 2:", value2)
+	// fmt.Println("Value 3:", value3)
 }
 
 // ================================================
