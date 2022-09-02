@@ -28,5 +28,6 @@
 - `Structs`: La forma de hacer clases en Go
 - Modificadores de acceso en funciones y Structs
 - `Structs` y `Punteros`
+- `Stringers`: Personalizar el output de un `Struct`
 
 <p align="right">(<a href="#top">back to top</a>)</p>

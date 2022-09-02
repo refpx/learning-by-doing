@@ -496,6 +496,51 @@
 
 // 17. Structs y Punteros
 
+// package main
+
+// import "fmt"
+
+// type pc struct {
+// 	ram   int
+// 	disk  int
+// 	brand string
+// }
+
+// func (myPC pc) ping() {
+// 	fmt.Println(myPC.brand, "Pong")
+// }
+
+// func (myPC *pc) duplicateRAM() {
+// 	myPC.ram = myPC.ram * 2
+// }
+
+// func main() {
+// 	x := 50
+// 	y := &x
+// 	fmt.Println(y)
+// 	fmt.Println(*y)
+
+// 	*y = 100
+// 	fmt.Println(x)
+
+// 	myPC := pc{ram: 16, disk: 256, brand: "ASUS"}
+// 	fmt.Println(myPC)
+
+// 	myPC.ping()
+
+// 	fmt.Println(myPC)
+// 	myPC.duplicateRAM()
+
+// 	fmt.Println(myPC)
+// 	myPC.duplicateRAM()
+
+// 	fmt.Println(myPC)
+// }
+
+// ================================================
+
+// 18. Stringers: Personalizar el output de un Struct
+
 package main
 
 import "fmt"
@@ -506,34 +551,12 @@ type pc struct {
 	brand string
 }
 
-func (myPC pc) ping() {
-	fmt.Println(myPC.brand, "Pong")
-}
-
-func (myPC *pc) duplicateRAM() {
-	myPC.ram = myPC.ram * 2
+func (myPC pc) String() string {
+	return fmt.Sprintf("Tengo %d GB de RAM, %d GB de disco y es una %s", myPC.ram, myPC.disk, myPC.brand)
 }
 
 func main() {
-	x := 50
-	y := &x
-	fmt.Println(y)
-	fmt.Println(*y)
-
-	*y = 100
-	fmt.Println(x)
-
 	myPC := pc{ram: 16, disk: 256, brand: "ASUS"}
-	fmt.Println(myPC)
-
-	myPC.ping()
-
-	fmt.Println(myPC)
-	myPC.duplicateRAM()
-
-	fmt.Println(myPC)
-	myPC.duplicateRAM()
-
 	fmt.Println(myPC)
 }
 
