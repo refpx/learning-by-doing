@@ -352,36 +352,73 @@
 
 // 12. Arrays y slices
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// Arrays
+// 	var array [4]int
+// 	array[0] = 1
+// 	array[1] = 2
+// 	fmt.Println(array, len(array), cap(array)) // len -> longitud, cap -> capacidad
+
+// 	// Slices
+// 	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+// 	fmt.Println(slice, len(slice), cap(slice))
+
+// 	// Métodos en el slice
+// 	fmt.Println(slice[0])   // Elemento específico
+// 	fmt.Println(slice[:3])  // Desde el inicio hasta el índice 3
+// 	fmt.Println(slice[1:3]) // Desde el índice 1 hasta el índice 3
+// 	fmt.Println(slice[3:])  // Desde el índice 3 hasta el final
+// 	fmt.Println(slice[:])   // Desde el inicio hasta el final
+
+// 	// Agregar elementos al slice
+// 	slice = append(slice, 10)
+// 	fmt.Println(slice)
+
+// 	// Agregar nuevo slice al slice
+// 	newSlice := []int{11, 12, 13}
+// 	slice = append(slice, newSlice...)
+// 	fmt.Println(slice)
+// }
+
+// ================================================
+
+// 13. Recorrido de Slices con Range
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func esPalindromo(text string) {
+	text = strings.ToLower(text)
+	var textReverse string
+	for i := len(text) - 1; i >= 0; i-- {
+		textReverse += string(text[i])
+	}
+	fmt.Println(text)
+	fmt.Println(textReverse)
+
+	if text == textReverse {
+		fmt.Println("Es palíndromo")
+	} else {
+		fmt.Println("No es palíndromo")
+	}
+}
 
 func main() {
-	// Arrays
-	var array [4]int
-	array[0] = 1
-	array[1] = 2
-	fmt.Println(array, len(array), cap(array)) // len -> longitud, cap -> capacidad
+	slice := []string{"Hola", "Mundo", "!"}
 
-	// Slices
-	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-	fmt.Println(slice, len(slice), cap(slice))
+	for i, value := range slice {
+		fmt.Println(i, value)
+	}
 
-	// Métodos en el slice
-	fmt.Println(slice[0])   // Elemento específico
-	fmt.Println(slice[:3])  // Desde el inicio hasta el índice 3
-	fmt.Println(slice[1:3]) // Desde el índice 1 hasta el índice 3
-	fmt.Println(slice[3:])  // Desde el índice 3 hasta el final
-	fmt.Println(slice[:])   // Desde el inicio hasta el final
-
-	// Agregar elementos al slice
-	slice = append(slice, 10)
-	fmt.Println(slice)
-
-	// Agregar nuevo slice al slice
-	newSlice := []int{11, 12, 13}
-	slice = append(slice, newSlice...)
-	fmt.Println(slice)
+	esPalindromo("Ama")
 }
 
 // ================================================

@@ -23,5 +23,6 @@
 - Multiples condiciones anidadas con `switch` en Golang
 - El uso de los keywords `defer`, `break` y `continue`
 - `Arrays` y `slices`
+- Recorrido de `Slices` con `Range`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
