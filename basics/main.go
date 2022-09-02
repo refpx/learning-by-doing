@@ -665,45 +665,68 @@
 
 // 22. Range, Close y Select en Channels
 
+// package main
+
+// import "fmt"
+
+// func message(text string, c chan string) {
+// 	c <- text
+// }
+
+// func main() {
+// 	c := make(chan string, 2)
+// 	c <- "Mensaje 1"
+// 	c <- "Mensaje 2"
+
+// 	fmt.Println(len(c), cap(c))
+
+// 	// Range y close
+// 	close(c)
+
+// 	// c <- "Mensaje 3"
+
+// 	for message := range c {
+// 		fmt.Println(message)
+// 	}
+
+// 	// Select
+// 	email1 := make(chan string)
+// 	email2 := make(chan string)
+// 	go message("Mensaje 1", email1)
+// 	go message("Mensaje 2", email2)
+
+// 	for i := 0; i < 2; i++ {
+// 		select {
+// 		case m1 := <-email1:
+// 			fmt.Println("Email 1:", m1)
+// 		case m2 := <-email2:
+// 			fmt.Println("Email 2:", m2)
+
+// 		}
+// 	}
+// }
+
+// ================================================
+
+// 23. Go modules
+
 package main
 
-import "fmt"
+import (
+	"net/http"
 
-func message(text string, c chan string) {
-	c <- text
-}
+	"github.com/labstack/echo"
+)
 
 func main() {
-	c := make(chan string, 2)
-	c <- "Mensaje 1"
-	c <- "Mensaje 2"
+	// Instanciar echo
+	e := echo.New()
 
-	fmt.Println(len(c), cap(c))
-
-	// Range y close
-	close(c)
-
-	// c <- "Mensaje 3"
-
-	for message := range c {
-		fmt.Println(message)
-	}
-
-	// Select
-	email1 := make(chan string)
-	email2 := make(chan string)
-	go message("Mensaje 1", email1)
-	go message("Mensaje 2", email2)
-
-	for i := 0; i < 2; i++ {
-		select {
-		case m1 := <-email1:
-			fmt.Println("Email 1:", m1)
-		case m2 := <-email2:
-			fmt.Println("Email 2:", m2)
-
-		}
-	}
+	// Ruta
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hola Mundo")
+	})
+	e.Logger.Fatal(e.Start(":1323"))
 }
 
 // ================================================
