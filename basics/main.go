@@ -473,23 +473,68 @@
 
 // 16. Modificadores de acceso en funciones y Structs
 
+// package main
+
+// import (
+// 	"fmt"
+// 	pk "learning-golang/basics/src/mypackage"
+// )
+
+// func main() {
+// 	var myCar pk.CarPublic
+// 	myCar.Brand = "Ford"
+// 	fmt.Println(myCar)
+
+// 	var myOtherCar pk.carPrivate
+// 	fmt.Println(myOtherCar)
+
+// 	pk.PrintMessage("Hola")
+// 	pk.printMessage1("Mundo")
+// }
+
+// ================================================
+
+// 17. Structs y Punteros
+
 package main
 
-import (
-	"fmt"
-	pk "learning-golang/basics/src/mypackage"
-)
+import "fmt"
+
+type pc struct {
+	ram   int
+	disk  int
+	brand string
+}
+
+func (myPC pc) ping() {
+	fmt.Println(myPC.brand, "Pong")
+}
+
+func (myPC *pc) duplicateRAM() {
+	myPC.ram = myPC.ram * 2
+}
 
 func main() {
-	var myCar pk.CarPublic
-	myCar.Brand = "Ford"
-	fmt.Println(myCar)
+	x := 50
+	y := &x
+	fmt.Println(y)
+	fmt.Println(*y)
 
-	var myOtherCar pk.carPrivate
-	fmt.Println(myOtherCar)
+	*y = 100
+	fmt.Println(x)
 
-	pk.PrintMessage("Hola")
-	pk.printMessage1("Mundo")
+	myPC := pc{ram: 16, disk: 256, brand: "ASUS"}
+	fmt.Println(myPC)
+
+	myPC.ping()
+
+	fmt.Println(myPC)
+	myPC.duplicateRAM()
+
+	fmt.Println(myPC)
+	myPC.duplicateRAM()
+
+	fmt.Println(myPC)
 }
 
 // ================================================

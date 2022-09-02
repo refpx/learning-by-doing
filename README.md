@@ -27,5 +27,6 @@
 - Llave valor con `Maps`
 - `Structs`: La forma de hacer clases en Go
 - Modificadores de acceso en funciones y Structs
+- `Structs` y `Punteros`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
