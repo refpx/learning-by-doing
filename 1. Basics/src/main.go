@@ -291,28 +291,60 @@
 
 // 10. Multiples condiciones anidadas con switch en Golang
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// modulo := 4 % 2
+// 	switch modulo := 4 % 2; modulo {
+// 	case 0:
+// 		fmt.Println("Es par")
+// 	default:
+// 		fmt.Println("Es impar")
+// 	}
+
+// 	// Switch sin condición
+// 	value := 100
+// 	switch {
+// 	case value > 100:
+// 		fmt.Println("Es mayor a 100")
+// 	case value < 100:
+// 		fmt.Println("Es menor a 100")
+// 	default:
+// 		fmt.Println("Es igual a 100")
+// 	}
+// }
+
+// ================================================
+
+// 11. El uso de los keywords defer, break y continue
+
 package main
 
 import "fmt"
 
 func main() {
-	// modulo := 4 % 2
-	switch modulo := 4 % 2; modulo {
-	case 0:
-		fmt.Println("Es par")
-	default:
-		fmt.Println("Es impar")
-	}
+	// Defer -> Se ejecuta al final de la función, antes de que todo muera
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
 
-	// Switch sin condición
-	value := 100
-	switch {
-	case value > 100:
-		fmt.Println("Es mayor a 100")
-	case value < 100:
-		fmt.Println("Es menor a 100")
-	default:
-		fmt.Println("Es igual a 100")
+	// Continue -> Salta la iteración actual
+	// Break -> Sale del ciclo
+	for i := 0; i < 5; i++ {
+		fmt.Println("Valor de i:", i)
+
+		// Continue
+		if i == 2 {
+			fmt.Println("Es 2")
+			continue
+		}
+
+		// Break
+		if i == 3 {
+			fmt.Println("Es 3")
+			break
+		}
 	}
 }
 

@@ -21,5 +21,6 @@
 - El poder del ciclo `for` en Golang
 - El condicional `if` en Golang
 - Multiples condiciones anidadas con `switch` en Golang
+- El uso de los keywords `defer`, `break` y `continue`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
