@@ -13,5 +13,6 @@
 
 - Hello world
 - Variables, constants and zero values
+- Arithmetic operators
 
 <p align="right">(<a href="#top">back to top</a>)</p>
