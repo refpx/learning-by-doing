@@ -541,23 +541,68 @@
 
 // 18. Stringers: Personalizar el output de un Struct
 
+// package main
+
+// import "fmt"
+
+// type pc struct {
+// 	ram   int
+// 	disk  int
+// 	brand string
+// }
+
+// func (myPC pc) String() string {
+// 	return fmt.Sprintf("Tengo %d GB de RAM, %d GB de disco y es una %s", myPC.ram, myPC.disk, myPC.brand)
+// }
+
+// func main() {
+// 	myPC := pc{ram: 16, disk: 256, brand: "ASUS"}
+// 	fmt.Println(myPC)
+// }
+
+// ================================================
+
+// 19. Interfaces y listas de interfaces
+
 package main
 
 import "fmt"
 
-type pc struct {
-	ram   int
-	disk  int
-	brand string
+type figuras2D interface {
+	area() float64
 }
 
-func (myPC pc) String() string {
-	return fmt.Sprintf("Tengo %d GB de RAM, %d GB de disco y es una %s", myPC.ram, myPC.disk, myPC.brand)
+type cuadrado struct {
+	base float64
+}
+
+type rectangulo struct {
+	base   float64
+	altura float64
+}
+
+func (c cuadrado) area() float64 {
+	return c.base * c.base
+}
+
+func (r rectangulo) area() float64 {
+	return r.base * r.altura
+}
+
+func calcular(f figuras2D) {
+	fmt.Println("Área:", f.area())
 }
 
 func main() {
-	myPC := pc{ram: 16, disk: 256, brand: "ASUS"}
-	fmt.Println(myPC)
+	miCuadrado := cuadrado{base: 3}
+	miRectangulo := rectangulo{base: 3, altura: 6}
+
+	calcular(miCuadrado)
+	calcular(miRectangulo)
+
+	// Lista de interfaces
+	miInterface := []interface{}{"Hola", 3, true}
+	fmt.Println(miInterface...)
 }
 
 // ================================================
