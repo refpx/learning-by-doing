@@ -450,23 +450,46 @@
 
 // 15. Structs: La forma de hacer clases en Go
 
+// package main
+
+// import "fmt"
+
+// type car struct {
+// 	brand string
+// 	year  int
+// }
+
+// func main() {
+// 	myCar := car{brand: "Ford", year: 2020}
+// 	fmt.Println(myCar)
+
+// 	var otherCar car
+// 	otherCar.brand = "Ferrari"
+// 	otherCar.year = 2021
+// 	fmt.Println(otherCar)
+// }
+
+// ================================================
+
+// 16. Modificadores de acceso en funciones y Structs
+
 package main
 
-import "fmt"
-
-type car struct {
-	brand string
-	year  int
-}
+import (
+	"fmt"
+	pk "learning-golang/basics/src/mypackage"
+)
 
 func main() {
-	myCar := car{brand: "Ford", year: 2020}
+	var myCar pk.CarPublic
+	myCar.Brand = "Ford"
 	fmt.Println(myCar)
 
-	var otherCar car
-	otherCar.brand = "Ferrari"
-	otherCar.year = 2021
-	fmt.Println(otherCar)
+	var myOtherCar pk.carPrivate
+	fmt.Println(myOtherCar)
+
+	pk.PrintMessage("Hola")
+	pk.printMessage1("Mundo")
 }
 
 // ================================================
