@@ -146,37 +146,44 @@
 
 // 6. Uso de funciones y funciones anónimas
 
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func normalFunction(message string) {
-	fmt.Println(message)
-}
+// func normalFunction(message string) {
+// 	fmt.Println(message)
+// }
 
-func tripleArgument(x, y int, z string) {
-	fmt.Println(x, y, z)
-}
+// func tripleArgument(x, y int, z string) {
+// 	fmt.Println(x, y, z)
+// }
 
-func returnValue(x int) int {
-	return x * 3
-}
+// func returnValue(x int) int {
+// 	return x * 3
+// }
 
-func doubleReturn(x int) (y, z int) {
-	return x * 2, x * 3
-}
+// func doubleReturn(x int) (y, z int) {
+// 	return x * 2, x * 3
+// }
 
-func main() {
-	normalFunction("Hola mundo!")
-	tripleArgument(1, 2, "Hola")
+// func main() {
+// 	normalFunction("Hola mundo!")
+// 	tripleArgument(1, 2, "Hola")
 
-	value1 := returnValue(3)
-	fmt.Println("Value 1:", value1)
+// 	value1 := returnValue(3)
+// 	fmt.Println("Value 1:", value1)
 
-	// value2, value3 := doubleReturn(3)
-	value2, _ := doubleReturn(3)
-	fmt.Println("Value 2:", value2)
-	// fmt.Println("Value 3:", value3)
-}
+// 	// value2, value3 := doubleReturn(3)
+// 	value2, _ := doubleReturn(3)
+// 	fmt.Println("Value 2:", value2)
+// 	// fmt.Println("Value 3:", value3)
+// }
+
+// ================================================
+
+// 7. Go doc
+
+// https://pkg.go.dev/ -> Documentación de paquetes
+// https://go.dev/ref/spec -> Especificación de Go
 
 // ================================================
