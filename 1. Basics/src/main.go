@@ -320,32 +320,68 @@
 
 // 11. El uso de los keywords defer, break y continue
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// Defer -> Se ejecuta al final de la función, antes de que todo muera
+// 	defer fmt.Println("Hola")
+// 	fmt.Println("Mundo")
+
+// 	// Continue -> Salta la iteración actual
+// 	// Break -> Sale del ciclo
+// 	for i := 0; i < 5; i++ {
+// 		fmt.Println("Valor de i:", i)
+
+// 		// Continue
+// 		if i == 2 {
+// 			fmt.Println("Es 2")
+// 			continue
+// 		}
+
+// 		// Break
+// 		if i == 3 {
+// 			fmt.Println("Es 3")
+// 			break
+// 		}
+// 	}
+// }
+
+// ================================================
+
+// 12. Arrays y slices
+
 package main
 
 import "fmt"
 
 func main() {
-	// Defer -> Se ejecuta al final de la función, antes de que todo muera
-	defer fmt.Println("Hola")
-	fmt.Println("Mundo")
+	// Arrays
+	var array [4]int
+	array[0] = 1
+	array[1] = 2
+	fmt.Println(array, len(array), cap(array)) // len -> longitud, cap -> capacidad
 
-	// Continue -> Salta la iteración actual
-	// Break -> Sale del ciclo
-	for i := 0; i < 5; i++ {
-		fmt.Println("Valor de i:", i)
+	// Slices
+	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(slice, len(slice), cap(slice))
 
-		// Continue
-		if i == 2 {
-			fmt.Println("Es 2")
-			continue
-		}
+	// Métodos en el slice
+	fmt.Println(slice[0])   // Elemento específico
+	fmt.Println(slice[:3])  // Desde el inicio hasta el índice 3
+	fmt.Println(slice[1:3]) // Desde el índice 1 hasta el índice 3
+	fmt.Println(slice[3:])  // Desde el índice 3 hasta el final
+	fmt.Println(slice[:])   // Desde el inicio hasta el final
 
-		// Break
-		if i == 3 {
-			fmt.Println("Es 3")
-			break
-		}
-	}
+	// Agregar elementos al slice
+	slice = append(slice, 10)
+	fmt.Println(slice)
+
+	// Agregar nuevo slice al slice
+	newSlice := []int{11, 12, 13}
+	slice = append(slice, newSlice...)
+	fmt.Println(slice)
 }
 
 // ================================================
