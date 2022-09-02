@@ -388,37 +388,62 @@
 
 // 13. Recorrido de Slices con Range
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"strings"
+// )
+
+// func esPalindromo(text string) {
+// 	text = strings.ToLower(text)
+// 	var textReverse string
+// 	for i := len(text) - 1; i >= 0; i-- {
+// 		textReverse += string(text[i])
+// 	}
+// 	fmt.Println(text)
+// 	fmt.Println(textReverse)
+
+// 	if text == textReverse {
+// 		fmt.Println("Es palíndromo")
+// 	} else {
+// 		fmt.Println("No es palíndromo")
+// 	}
+// }
+
+// func main() {
+// 	slice := []string{"Hola", "Mundo", "!"}
+
+// 	for i, value := range slice {
+// 		fmt.Println(i, value)
+// 	}
+
+// 	esPalindromo("Ama")
+// }
+
+// ================================================
+
+// 14. Llave valor con Maps
+
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func esPalindromo(text string) {
-	text = strings.ToLower(text)
-	var textReverse string
-	for i := len(text) - 1; i >= 0; i-- {
-		textReverse += string(text[i])
-	}
-	fmt.Println(text)
-	fmt.Println(textReverse)
-
-	if text == textReverse {
-		fmt.Println("Es palíndromo")
-	} else {
-		fmt.Println("No es palíndromo")
-	}
-}
+import "fmt"
 
 func main() {
-	slice := []string{"Hola", "Mundo", "!"}
+	// Maps -> Llave - Valor / almacena datos de forma desordenada
+	m := make(map[string]int)
+	m["Jose"] = 20
+	m["Maria"] = 25
+	fmt.Println(m)
 
-	for i, value := range slice {
-		fmt.Println(i, value)
+	// Recorrer map
+	for i, v := range m {
+		fmt.Println(i, v)
 	}
 
-	esPalindromo("Ama")
+	// Encontrar valor
+	value, ok := m["Jose"]
+	fmt.Println(value, ok)
 }
 
 // ================================================

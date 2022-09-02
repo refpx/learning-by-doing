@@ -24,5 +24,6 @@
 - El uso de los keywords `defer`, `break` y `continue`
 - `Arrays` y `slices`
 - Recorrido de `Slices` con `Range`
+- Llave valor con `Maps`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
