@@ -31,5 +31,6 @@
 - `Stringers`: Personalizar el output de un `Struct`
 - Interfaces y listas de interfaces
 - Goroutines
+- Channels: La forma de organizar las goroutines
 
 <p align="right">(<a href="#top">back to top</a>)</p>

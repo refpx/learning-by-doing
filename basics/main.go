@@ -609,34 +609,56 @@
 
 // 20. Goroutines
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"sync"
+// 	"time"
+// )
+
+// func say(text string, wg *sync.WaitGroup) {
+// 	defer wg.Done()
+// 	fmt.Println(text)
+// }
+
+// func main() {
+// 	var wg sync.WaitGroup
+
+// 	fmt.Println("Hola")
+// 	wg.Add(1)
+
+// 	go say("Mundo", &wg)
+
+// 	wg.Wait()
+
+// 	go func(text string) {
+// 		fmt.Println(text)
+// 	}("Adios")
+
+// 	time.Sleep(time.Second * 1)
+// }
+
+// ================================================
+
+// 21. Channels: La forma de organizar las goroutines
+
 package main
 
-import (
-	"fmt"
-	"sync"
-	"time"
-)
+import "fmt"
 
-func say(text string, wg *sync.WaitGroup) {
-	defer wg.Done()
-	fmt.Println(text)
+func say(text string, c chan<- string) {
+	c <- text
 }
 
 func main() {
-	var wg sync.WaitGroup
+	c := make(chan string, 1)
 
 	fmt.Println("Hola")
-	wg.Add(1)
 
-	go say("Mundo", &wg)
+	go say("Adiós", c)
 
-	wg.Wait()
-
-	go func(text string) {
-		fmt.Println(text)
-	}("Adios")
-
-	time.Sleep(time.Second * 1)
+	fmt.Println(<-c)
 }
 
 // ================================================
