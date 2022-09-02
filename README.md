@@ -15,5 +15,6 @@
 - Variables, constants and zero values
 - Arithmetic operators
 - Tipos de datos primitivos
+- Paquete `fmt`
 
 <p align="right">(<a href="#top">back to top</a>)</p>

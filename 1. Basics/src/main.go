@@ -114,3 +114,32 @@
 // complex64, complex128
 
 // ================================================
+
+// 5. Paquete fmt
+
+package main
+
+import "fmt"
+
+func main() {
+	// fmt.Println -> Imprime un valor y agrega un salto de línea
+	helloMessage := "Hello"
+	worldMessage := "World"
+	fmt.Println(helloMessage, worldMessage)
+
+	// fmt.Printf -> %v = valor, %s = string, %d = int, %f = float, %t = bool
+	name := "Fredy"
+	age := 25
+	fmt.Printf("%s tiene %d años\n", name, age)
+	fmt.Printf("%v tiene %v años\n", name, age)
+
+	// fmt.Sprintf -> Guardar el resultado de un Printf en una variable
+	message := fmt.Sprintf("%s tiene %d años", name, age)
+	fmt.Println(message)
+
+	// Obtener el tipo de una variable
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("age: %T\n", age)
+}
+
+// ================================================
