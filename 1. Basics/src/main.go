@@ -187,3 +187,36 @@
 // https://go.dev/ref/spec -> Especificación de Go
 
 // ================================================
+
+// 8. El poder del ciclo for en Golang
+
+package main
+
+import "fmt"
+
+func main() {
+	// For condicional
+	for i := 0; i < 5; i++ {
+		fmt.Println("Valor de i:", i)
+	}
+
+	for i := 10; i > 0; i-- {
+		fmt.Println("Valor de i:", i)
+	}
+
+	// For while
+	counter := 0
+	for counter < 5 {
+		fmt.Println("Valor de counter:", counter)
+		counter++
+	}
+
+	// For infinito
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+	}
+}
+
+// ================================================

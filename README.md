@@ -18,5 +18,6 @@
 - Paquete `fmt`
 - Uso de funciones y funciones anónimas
 - Go doc: la forma de ver documentación
+- El poder del ciclo `for` en Golang
 
 <p align="right">(<a href="#top">back to top</a>)</p>
