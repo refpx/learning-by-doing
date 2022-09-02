@@ -564,45 +564,79 @@
 
 // 19. Interfaces y listas de interfaces
 
+// package main
+
+// import "fmt"
+
+// type figuras2D interface {
+// 	area() float64
+// }
+
+// type cuadrado struct {
+// 	base float64
+// }
+
+// type rectangulo struct {
+// 	base   float64
+// 	altura float64
+// }
+
+// func (c cuadrado) area() float64 {
+// 	return c.base * c.base
+// }
+
+// func (r rectangulo) area() float64 {
+// 	return r.base * r.altura
+// }
+
+// func calcular(f figuras2D) {
+// 	fmt.Println("Área:", f.area())
+// }
+
+// func main() {
+// 	miCuadrado := cuadrado{base: 3}
+// 	miRectangulo := rectangulo{base: 3, altura: 6}
+
+// 	calcular(miCuadrado)
+// 	calcular(miRectangulo)
+
+// 	// Lista de interfaces
+// 	miInterface := []interface{}{"Hola", 3, true}
+// 	fmt.Println(miInterface...)
+// }
+
+// ================================================
+
+// 20. Goroutines
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
-type figuras2D interface {
-	area() float64
-}
-
-type cuadrado struct {
-	base float64
-}
-
-type rectangulo struct {
-	base   float64
-	altura float64
-}
-
-func (c cuadrado) area() float64 {
-	return c.base * c.base
-}
-
-func (r rectangulo) area() float64 {
-	return r.base * r.altura
-}
-
-func calcular(f figuras2D) {
-	fmt.Println("Área:", f.area())
+func say(text string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	fmt.Println(text)
 }
 
 func main() {
-	miCuadrado := cuadrado{base: 3}
-	miRectangulo := rectangulo{base: 3, altura: 6}
+	var wg sync.WaitGroup
 
-	calcular(miCuadrado)
-	calcular(miRectangulo)
+	fmt.Println("Hola")
+	wg.Add(1)
 
-	// Lista de interfaces
-	miInterface := []interface{}{"Hola", 3, true}
-	fmt.Println(miInterface...)
+	go say("Mundo", &wg)
+
+	wg.Wait()
+
+	go func(text string) {
+		fmt.Println(text)
+	}("Adios")
+
+	time.Sleep(time.Second * 1)
 }
 
 // ================================================

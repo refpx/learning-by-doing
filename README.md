@@ -30,5 +30,6 @@
 - `Structs` y `Punteros`
 - `Stringers`: Personalizar el output de un `Struct`
 - Interfaces y listas de interfaces
+- Goroutines
 
 <p align="right">(<a href="#top">back to top</a>)</p>
