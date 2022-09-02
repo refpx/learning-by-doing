@@ -20,5 +20,6 @@
 - Go doc: la forma de ver documentación
 - El poder del ciclo `for` en Golang
 - El condicional `if` en Golang
+- Multiples condiciones anidadas con `switch` en Golang
 
 <p align="right">(<a href="#top">back to top</a>)</p>

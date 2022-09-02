@@ -223,68 +223,97 @@
 
 // 9. El condicional if en Golang
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"log"
+// 	"strconv"
+// )
+
+// func evenOrOdd(value int) string {
+// 	if value%2 == 0 {
+// 		return "Par"
+// 	} else {
+// 		return "Impar"
+// 	}
+// }
+
+// func isAdmin(username, password string) bool {
+// 	usernameAdmin := "admin"
+// 	passwordAdmin := "admin"
+
+// 	if username == usernameAdmin && password == passwordAdmin {
+// 		return true
+// 	} else {
+// 		return false
+// 	}
+// }
+
+// func main() {
+// 	valor1 := 1
+// 	valor2 := 2
+
+// 	if valor1 == 1 {
+// 		fmt.Println("Valor1 es igual a 1")
+// 	} else {
+// 		fmt.Println("Valor1 no es igual a 1")
+// 	}
+
+// 	// Con AND - &&
+// 	if valor1 == 1 && valor2 == 2 {
+// 		fmt.Println("Es verdad")
+// 	}
+
+// 	// Con OR - ||
+// 	if valor1 == 1 || valor2 == 2 {
+// 		fmt.Println("Es verdad")
+// 	}
+
+// 	// Convertir texto a número
+// 	// value, err := strconv.Atoi("asdasd") // Error
+// 	value, err := strconv.Atoi("10") // OK
+// 	if err != nil {                  // nil = vacío
+// 		log.Fatal(err)
+// 	}
+// 	fmt.Println(value)
+
+// 	// Reto: función para determinar si un número es par o impar
+// 	fmt.Println(evenOrOdd(1))
+// 	fmt.Println(evenOrOdd(2))
+
+// 	// Reto: función para determinar acceso a un sitio web
+// 	fmt.Println(isAdmin("admin", "admin"))
+// 	fmt.Println(isAdmin("admin", "admin2"))
+// }
+
+// ================================================
+
+// 10. Multiples condiciones anidadas con switch en Golang
+
 package main
 
-import (
-	"fmt"
-	"log"
-	"strconv"
-)
-
-func evenOrOdd(value int) string {
-	if value%2 == 0 {
-		return "Par"
-	} else {
-		return "Impar"
-	}
-}
-
-func isAdmin(username, password string) bool {
-	usernameAdmin := "admin"
-	passwordAdmin := "admin"
-
-	if username == usernameAdmin && password == passwordAdmin {
-		return true
-	} else {
-		return false
-	}
-}
+import "fmt"
 
 func main() {
-	valor1 := 1
-	valor2 := 2
-
-	if valor1 == 1 {
-		fmt.Println("Valor1 es igual a 1")
-	} else {
-		fmt.Println("Valor1 no es igual a 1")
+	// modulo := 4 % 2
+	switch modulo := 4 % 2; modulo {
+	case 0:
+		fmt.Println("Es par")
+	default:
+		fmt.Println("Es impar")
 	}
 
-	// Con AND - &&
-	if valor1 == 1 && valor2 == 2 {
-		fmt.Println("Es verdad")
+	// Switch sin condición
+	value := 100
+	switch {
+	case value > 100:
+		fmt.Println("Es mayor a 100")
+	case value < 100:
+		fmt.Println("Es menor a 100")
+	default:
+		fmt.Println("Es igual a 100")
 	}
-
-	// Con OR - ||
-	if valor1 == 1 || valor2 == 2 {
-		fmt.Println("Es verdad")
-	}
-
-	// Convertir texto a número
-	// value, err := strconv.Atoi("asdasd") // Error
-	value, err := strconv.Atoi("10") // OK
-	if err != nil {                  // nil = vacío
-		log.Fatal(err)
-	}
-	fmt.Println(value)
-
-	// Reto: función para determinar si un número es par o impar
-	fmt.Println(evenOrOdd(1))
-	fmt.Println(evenOrOdd(2))
-
-	// Reto: función para determinar acceso a un sitio web
-	fmt.Println(isAdmin("admin", "admin"))
-	fmt.Println(isAdmin("admin", "admin2"))
 }
 
 // ================================================
