@@ -425,25 +425,48 @@
 
 // 14. Llave valor con Maps
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// Maps -> Llave - Valor / almacena datos de forma desordenada
+// 	m := make(map[string]int)
+// 	m["Jose"] = 20
+// 	m["Maria"] = 25
+// 	fmt.Println(m)
+
+// 	// Recorrer map
+// 	for i, v := range m {
+// 		fmt.Println(i, v)
+// 	}
+
+// 	// Encontrar valor
+// 	value, ok := m["Jose"]
+// 	fmt.Println(value, ok)
+// }
+
+// ================================================
+
+// 15. Structs: La forma de hacer clases en Go
+
 package main
 
 import "fmt"
 
+type car struct {
+	brand string
+	year  int
+}
+
 func main() {
-	// Maps -> Llave - Valor / almacena datos de forma desordenada
-	m := make(map[string]int)
-	m["Jose"] = 20
-	m["Maria"] = 25
-	fmt.Println(m)
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
 
-	// Recorrer map
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
-
-	// Encontrar valor
-	value, ok := m["Jose"]
-	fmt.Println(value, ok)
+	var otherCar car
+	otherCar.brand = "Ferrari"
+	otherCar.year = 2021
+	fmt.Println(otherCar)
 }
 
 // ================================================

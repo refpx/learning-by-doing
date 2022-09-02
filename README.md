@@ -25,5 +25,6 @@
 - `Arrays` y `slices`
 - Recorrido de `Slices` con `Range`
 - Llave valor con `Maps`
+- `Structs`: La forma de hacer clases en Go
 
 <p align="right">(<a href="#top">back to top</a>)</p>
