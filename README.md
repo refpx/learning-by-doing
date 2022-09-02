@@ -14,5 +14,6 @@
 - Hello world
 - Variables, constants and zero values
 - Arithmetic operators
+- Tipos de datos primitivos
 
 <p align="right">(<a href="#top">back to top</a>)</p>

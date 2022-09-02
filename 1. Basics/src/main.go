@@ -49,58 +49,68 @@
 
 // 3. Arithmetic operators
 
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	x := 10
-	y := 50
+// func main() {
+// 	x := 10
+// 	y := 50
 
-	// Suma
-	result := x + y
-	fmt.Println("x + y =", result)
+// 	// Suma
+// 	result := x + y
+// 	fmt.Println("x + y =", result)
 
-	// Resta
-	result = y - x
-	fmt.Println("y - x =", result)
+// 	// Resta
+// 	result = y - x
+// 	fmt.Println("y - x =", result)
 
-	// Multiplicación
-	result = x * y
-	fmt.Println("x * y =", result)
+// 	// Multiplicación
+// 	result = x * y
+// 	fmt.Println("x * y =", result)
 
-	// División
-	result = y / x
-	fmt.Println("y / x =", result)
+// 	// División
+// 	result = y / x
+// 	fmt.Println("y / x =", result)
 
-	// Módulo
-	result = y % x
-	fmt.Println("y % x =", result)
+// 	// Módulo
+// 	result = y % x
+// 	fmt.Println("y % x =", result)
 
-	// Incremento
-	x++
-	fmt.Println("x++ =", x)
+// 	// Incremento
+// 	x++
+// 	fmt.Println("x++ =", x)
 
-	// Decremento
-	x--
-	fmt.Println("x-- =", x)
+// 	// Decremento
+// 	x--
+// 	fmt.Println("x-- =", x)
 
-	// Reto: Calcular el área de un rectangulo, trapecio y un círculo
-	baseRectangulo := 4
-	alturaRectangulo := 5
-	areaRectangulo := baseRectangulo * alturaRectangulo
-	fmt.Println("El área del rectangulo es:", areaRectangulo)
+// 	// Reto: Calcular el área de un rectangulo, trapecio y un círculo
+// 	baseRectangulo := 4
+// 	alturaRectangulo := 5
+// 	areaRectangulo := baseRectangulo * alturaRectangulo
+// 	fmt.Println("El área del rectangulo es:", areaRectangulo)
 
-	baseTrapecio := 4
-	base2Trapecio := 5
-	alturaTrapecio := 6
-	areaTrapecio := (baseTrapecio + base2Trapecio) / 2 * alturaTrapecio
-	fmt.Println("El área del trapecio es:", areaTrapecio)
+// 	baseTrapecio := 4
+// 	base2Trapecio := 5
+// 	alturaTrapecio := 6
+// 	areaTrapecio := (baseTrapecio + base2Trapecio) / 2 * alturaTrapecio
+// 	fmt.Println("El área del trapecio es:", areaTrapecio)
 
-	const pi float64 = 3.1416
-	radioCirculo := 5
-	areaCirculo := pi * float64(radioCirculo*radioCirculo)
-	fmt.Println("El área del círculo es:", areaCirculo)
-}
+// 	const pi float64 = 3.1416
+// 	radioCirculo := 5
+// 	areaCirculo := pi * float64(radioCirculo*radioCirculo)
+// 	fmt.Println("El área del círculo es:", areaCirculo)
+// }
+
+// ================================================
+
+// 4. Tipos de datos primitivos
+// int8, int16, int32, int64, int
+// uint8, uint16, uint32, uint64, uint
+// float32, float64
+// string = ""
+// bool
+// complex64, complex128
 
 // ================================================
