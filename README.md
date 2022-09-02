@@ -32,5 +32,6 @@
 - Interfaces y listas de interfaces
 - Goroutines
 - Channels: La forma de organizar las goroutines
+- Range, Close y Select en Channels
 
 <p align="right">(<a href="#top">back to top</a>)</p>
