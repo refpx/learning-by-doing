@@ -190,33 +190,101 @@
 
 // 8. El poder del ciclo for en Golang
 
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	// For condicional
+// 	for i := 0; i < 5; i++ {
+// 		fmt.Println("Valor de i:", i)
+// 	}
+
+// 	for i := 10; i > 0; i-- {
+// 		fmt.Println("Valor de i:", i)
+// 	}
+
+// 	// For while
+// 	counter := 0
+// 	for counter < 5 {
+// 		fmt.Println("Valor de counter:", counter)
+// 		counter++
+// 	}
+
+// 	// For infinito
+// 	counterForever := 0
+// 	for {
+// 		fmt.Println(counterForever)
+// 		counterForever++
+// 	}
+// }
+
+// ================================================
+
+// 9. El condicional if en Golang
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"strconv"
+)
+
+func evenOrOdd(value int) string {
+	if value%2 == 0 {
+		return "Par"
+	} else {
+		return "Impar"
+	}
+}
+
+func isAdmin(username, password string) bool {
+	usernameAdmin := "admin"
+	passwordAdmin := "admin"
+
+	if username == usernameAdmin && password == passwordAdmin {
+		return true
+	} else {
+		return false
+	}
+}
 
 func main() {
-	// For condicional
-	for i := 0; i < 5; i++ {
-		fmt.Println("Valor de i:", i)
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("Valor1 es igual a 1")
+	} else {
+		fmt.Println("Valor1 no es igual a 1")
 	}
 
-	for i := 10; i > 0; i-- {
-		fmt.Println("Valor de i:", i)
+	// Con AND - &&
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Es verdad")
 	}
 
-	// For while
-	counter := 0
-	for counter < 5 {
-		fmt.Println("Valor de counter:", counter)
-		counter++
+	// Con OR - ||
+	if valor1 == 1 || valor2 == 2 {
+		fmt.Println("Es verdad")
 	}
 
-	// For infinito
-	counterForever := 0
-	for {
-		fmt.Println(counterForever)
-		counterForever++
+	// Convertir texto a número
+	// value, err := strconv.Atoi("asdasd") // Error
+	value, err := strconv.Atoi("10") // OK
+	if err != nil {                  // nil = vacío
+		log.Fatal(err)
 	}
+	fmt.Println(value)
+
+	// Reto: función para determinar si un número es par o impar
+	fmt.Println(evenOrOdd(1))
+	fmt.Println(evenOrOdd(2))
+
+	// Reto: función para determinar acceso a un sitio web
+	fmt.Println(isAdmin("admin", "admin"))
+	fmt.Println(isAdmin("admin", "admin2"))
 }
 
 // ================================================
