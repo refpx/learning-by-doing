@@ -26,6 +26,11 @@ func (repo *PostgresRespository) InsertUser(ctx context.Context, user *models.Us
 	return err
 }
 
+func (repo *PostgresRespository) InsertPost(ctx context.Context, post *models.Post) error {
+	_, err := repo.db.ExecContext(ctx, "INSERT INTO posts (id, post_content, user_id) VALUES ($1, $2, $3)", post.Id, post.PostContent, post.UserId)
+	return err
+}
+
 func (repo *PostgresRespository) GetUserById(ctx context.Context, id string) (*models.User, error) {
 	rows, err := repo.db.QueryContext(ctx, "SELECT id, email FROM users WHERE id = $1", id)
 
