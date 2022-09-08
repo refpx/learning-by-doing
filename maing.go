@@ -4,10 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/refpx/go-gorm-rest-api/db"
 	"github.com/refpx/go-gorm-rest-api/routes"
 )
 
 func main() {
+	db.DBConnection()
 	r := mux.NewRouter()
 	r.HandleFunc("/", routes.HomeHandler)
 
