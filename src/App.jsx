@@ -1,10 +1,30 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Admin, Analytics, Dashboard, Home, Landing } from './pages'
 
 function App() {
+  const [user, setUser] = useState(null)
+
+  const login = () => {
+    // request done
+    setUser({ id: 1, name: 'John Doe', role: 'admin' })
+  }
+
+  const logout = () => {
+    // request done
+    setUser(null)
+  }
+
   return (
     <BrowserRouter>
       <Navigation />
+
+      {user ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <button onClick={login}>Login</button>
+      )}
+
       <Routes>
         <Route index element={<Landing />} />
         <Route path='/landing' element={<Landing />} />
