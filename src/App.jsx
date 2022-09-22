@@ -29,16 +29,18 @@ function App() {
       <Routes>
         <Route index element={<Landing />} />
         <Route path='/landing' element={<Landing />} />
+        <Route element={<ProtectedRoute user={user} />}>
+          <Route path='/home' element={<Home />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Route>
         <Route
-          path='/home'
+          path='/analytics'
           element={
-            <ProtectedRoute user={user} redirectTo='/'>
-              <Home />
+            <ProtectedRoute user={user}>
+              <Analytics />
             </ProtectedRoute>
           }
         />
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/analytics' element={<Analytics />} />
         <Route path='/admin' element={<Admin />} />
       </Routes>
     </BrowserRouter>
