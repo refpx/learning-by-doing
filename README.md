@@ -21,4 +21,6 @@
 
 - Go simple crud: react y mongodb - [09-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-react-mongodb)
 
+- REST API y websockets - [07-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-rest-ws)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
