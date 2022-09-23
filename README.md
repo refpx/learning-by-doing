@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align="center">
   <h1>
     <img height="54" src="https://skillicons.dev/icons?i=go">
@@ -7,5 +9,12 @@
   <p>En este repositorio encontrarán proyectos y tutoriales que desarrollo para continuar aprendiendo Go/Golang.</p>
 </div>
 
-<!-- <a name="readme-top"></a> -->
-<!-- <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p> -->
+---
+
+## 📚 Contenido
+
+- Curso de Go/Golang - [02-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-course)
+
+- CRUD: backend con go y frontend con react - [18-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-react-crud)
+
+<p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
