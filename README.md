@@ -23,4 +23,6 @@
 
 - REST API y websockets - [07-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-rest-ws)
 
+- REST API usando GORM - [08-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-gorm-rest-api)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
