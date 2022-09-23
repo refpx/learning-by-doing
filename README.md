@@ -17,4 +17,6 @@
 
 - CRUD: backend con go y frontend con react - [18-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-react-crud)
 
+- Acortador de URL - [13-09-22] - [Ver código](https://github.com/refpx/learning-go/tree/main/go-url-shortener)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
