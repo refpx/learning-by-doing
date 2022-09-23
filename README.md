@@ -17,4 +17,6 @@
 
 - Reto de Rappi con `React` - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
 
+- Ejemplo de cómo usar `localstorage` en `React` - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
