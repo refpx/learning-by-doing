@@ -17,6 +17,8 @@
 
 - Reto de Rappi con `React` - [21-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
 
-- Ejemplo de cómo usar `localstorage` en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
+- Ejemplo de cómo usar `localstorage` en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-localstorage)
+
+- Consumir API de Rick and Morty en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-rickandmorty-api)
 
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
