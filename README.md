@@ -21,4 +21,6 @@
 
 - Consumir API de Rick and Morty en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-rickandmorty-api)
 
+- CRUD de tareas en `React` - [15-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-task-example)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
