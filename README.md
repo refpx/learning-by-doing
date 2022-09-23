@@ -25,4 +25,6 @@
 
 - Ecommerce con `React` y Firebase - [12-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-firebase-ecommerce)
 
+- Ejemplo: `React` y Firebase - [02-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-firebase-example)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
