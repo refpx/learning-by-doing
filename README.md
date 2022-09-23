@@ -29,4 +29,6 @@
 
 - Auth CRUD con Supabase y React - [17-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-supabase-auth-crud)
 
+- Socket.IO con express y react - [17-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-supabase-auth-crud)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
