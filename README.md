@@ -13,10 +13,10 @@
 
 ## Tabla de contenidos
 
-- Rutas protegidas con `React Router DOM` - [Ver código](https://github.com/refpx/learning-react/tree/main/react-router-protected)
+- Rutas protegidas con `React Router DOM` - [22-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-router-protected)
 
-- Reto de Rappi con `React` - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
+- Reto de Rappi con `React` - [21-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
 
-- Ejemplo de cómo usar `localstorage` en `React` - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
+- Ejemplo de cómo usar `localstorage` en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
 
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
