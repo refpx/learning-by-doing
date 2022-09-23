@@ -23,4 +23,6 @@
 
 - CRUD de tareas en `React` - [15-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-task-example)
 
+- Ecommerce con `React` y Firebase - [12-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-firebase-ecommerce)
+
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
