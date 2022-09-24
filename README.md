@@ -6,7 +6,7 @@
     <br>
     Aprendiendo Go/Golang
   </h1>
-  <p>En este repositorio encontrarán proyectos y tutoriales que desarrollo para continuar aprendiendo Go/Golang.</p>
+  <p>En este repositorio encontrarán proyectos y tutoriales que desarrollo para continuar aprendiendo <code>Go/Golang</code>.</p>
 </div>
 
 ---
