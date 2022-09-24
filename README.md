@@ -6,7 +6,7 @@
     <br>
     Aprendiendo Next.js
   </h1>
-  <p>En este repositorio encontrarán proyectos y tutoriales que desarrollo para continuar aprendiendo Next.js.</p>
+  <p>En este repositorio encontrarán proyectos y tutoriales que desarrollo para continuar aprendiendo <code>Next.js</code>.</p>
 </div>
 
 ---
