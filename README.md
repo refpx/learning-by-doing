@@ -13,22 +13,22 @@
 
 ## Tabla de contenidos
 
-- Rutas protegidas con `React Router DOM` - [22-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-router-protected)
+- Rutas protegidas con `React Router DOM` - [22-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/22-09-22-rutas-protegidas)
 
-- Reto de Rappi con `React` - [21-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-challenge-rappi)
+- Reto de Rappi - [22-09-21] - [Ver código](https://github.com/refpx/learning-react/tree/22-09-21-reto-rappi)
 
-- Ejemplo de cómo usar `localstorage` en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-localstorage)
+- Ecommerce con `Firebase` - [22-09-12] - [Ver código](https://github.com/refpx/learning-react/tree/22-09-12-firebase-ecommerce)
 
-- Consumir API de Rick and Morty en `React` - [13-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-rickandmorty-api)
+- Auth con `Firebase` - [22-09-02] - [Ver código](https://github.com/refpx/learning-react/tree/22-09-02-firebase-auth)
 
-- CRUD de tareas en `React` - [15-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-task-example)
+- Auth con `Supabase` - [22-08-17] - [Ver código](https://github.com/refpx/learning-react/tree/22-08-17-supabase-auth)
 
-- Ecommerce con `React` y Firebase - [12-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-firebase-ecommerce)
+- TODO con `Socket.IO` y `express` - [22-08-17] - [Ver código](https://github.com/refpx/learning-react/tree/22-08-17-socketio-express-todo)
 
-- Ejemplo: `React` y Firebase - [02-09-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-firebase-example)
+- CRUD de tareas- [22-08-15] - [Ver código](https://github.com/refpx/learning-react/tree/22-08-15-crud-tareas)
 
-- Auth CRUD con Supabase y React - [17-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-supabase-auth-crud)
+- TODO con `localstorage`- [22-08-13] - [Ver código](https://github.com/refpx/learning-react/tree/22-08-13-todo-localstorage)
 
-- Socket.IO con express y react - [17-08-22] - [Ver código](https://github.com/refpx/learning-react/tree/main/react-supabase-auth-crud)
+- Consumir API de Rick and Morty - [22-08-13] - [Ver código](https://github.com/refpx/learning-react/tree/22-08-13-ram-api)
 
 <p align="right">(<a target="_blank" href="#readme-top">back to top</a>)</p>
