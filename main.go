@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"0.Basics/greet"
+	"github.com/refpx/learning-by-doing/tree/go-23-01-12-basics/greet"
+	"rsc.io/quote"
 )
 
 func main() {
@@ -402,10 +403,10 @@ func main() {
 	*/
 
 	// ==========> Paquetes
-	fmt.Println("Hello")
-	greet.English()
-	greet.Spanish()
-	greet.Italian()
+
+	fmt.Println(greet.English())
+	fmt.Println(quote.Hello())
+
 }
 
 // ==========> Funciones parte 1
