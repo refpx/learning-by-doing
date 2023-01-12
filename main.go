@@ -4,8 +4,7 @@ import (
 	"fmt"
 
 	"github.com/refpx/learning-by-doing/tree/go-23-01-12-basics/greet"
-	"rsc.io/quote"
-	quoteV3 "rsc.io/quote/v3"
+	"rsc.io/quote/v3"
 )
 
 func main() {
@@ -406,8 +405,8 @@ func main() {
 	// ==========> Paquetes
 
 	fmt.Println(greet.English())
-	fmt.Println(quote.Hello())
-	fmt.Println(quoteV3.Concurrency())
+	fmt.Println(quote.HelloV3())
+	fmt.Println(quote.Concurrency())
 }
 
 // ==========> Funciones parte 1
