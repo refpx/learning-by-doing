@@ -26,6 +26,8 @@
 
 ## 📚 Contenido de Go / Golang
 
+- Curso de Go/Golang: Principios básicos - [23-01-12] - [Ver código](https://github.com/refpx/learning-by-doing/tree/go-23-01-12-basics)
+
 - CRUD: backend con go y frontend con react - [22-09-18] - [Ver código](https://github.com/refpx/learning-by-doing/tree/go-22-09-18-crud-simple)
 
 - Acortador de URL - [22-09-13] - [Ver código](https://github.com/refpx/learning-by-doing/tree/go-22-09-13-url-shortener)
