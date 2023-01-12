@@ -5,6 +5,7 @@ import (
 
 	"github.com/refpx/learning-by-doing/tree/go-23-01-12-basics/greet"
 	"rsc.io/quote"
+	quoteV3 "rsc.io/quote/v3"
 )
 
 func main() {
@@ -406,7 +407,7 @@ func main() {
 
 	fmt.Println(greet.English())
 	fmt.Println(quote.Hello())
-
+	fmt.Println(quoteV3.Concurrency())
 }
 
 // ==========> Funciones parte 1
