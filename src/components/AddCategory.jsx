@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PropTypes from 'prop-types'
 
 export function AddCategory({ handleAddCategory }) {
   const [inputValue, setInputValue] = useState('')
@@ -17,7 +18,7 @@ export function AddCategory({ handleAddCategory }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} aria-label="form">
       <input
         type="text"
         placeholder="Dota 2, Valorant..."
@@ -26,4 +27,8 @@ export function AddCategory({ handleAddCategory }) {
       />
     </form>
   )
+}
+
+AddCategory.propTypes = {
+  handleAddCategory: PropTypes.func.isRequired
 }
