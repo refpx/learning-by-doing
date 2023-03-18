@@ -1,3 +1,4 @@
+/* globals describe, expect, test */
 import { render, screen } from '@testing-library/react'
 import { GifItem } from '../../src/components/GifItem'
 
@@ -25,5 +26,4 @@ describe('Test en <GifItem />', () => {
     render(<GifItem title={title} url={url} />)
     expect(screen.getByText(title)).toBeTruthy()
   })
-
 })

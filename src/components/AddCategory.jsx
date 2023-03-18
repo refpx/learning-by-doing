@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 
-export function AddCategory({ handleAddCategory }) {
+export function AddCategory ({ handleAddCategory }) {
   const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = ({ target }) => {
@@ -18,10 +18,10 @@ export function AddCategory({ handleAddCategory }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} aria-label="form">
+    <form onSubmit={handleSubmit} aria-label='form'>
       <input
-        type="text"
-        placeholder="Dota 2, Valorant..."
+        type='text'
+        placeholder='Dota 2, Valorant...'
         value={inputValue}
         onChange={handleInputChange}
       />

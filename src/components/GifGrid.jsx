@@ -2,8 +2,7 @@ import PropTypes from 'prop-types'
 import { GifItem } from './GifItem'
 import { useFetchGifs } from '../hooks/useFetchGifs'
 
-export function GifGrid({ category }) {
-
+export function GifGrid ({ category }) {
   const { images, isLoading } = useFetchGifs(category)
 
   if (isLoading) return <p>Loading...</p>
@@ -14,12 +13,12 @@ export function GifGrid({ category }) {
       <div className='card-grid'>
         {
           images.map((image) =>
-          (
-            <GifItem
-              key={image.id}
-              {...image}
-            />
-          )
+            (
+              <GifItem
+                key={image.id}
+                {...image}
+              />
+            )
           )
         }
       </div>

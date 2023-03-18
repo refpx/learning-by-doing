@@ -1,5 +1,6 @@
+/* globals describe, expect, test, jest */
 import { render, screen, fireEvent } from '@testing-library/react'
-import { AddCategory } from "../../src/components/AddCategory"
+import { AddCategory } from '../../src/components/AddCategory'
 
 describe('Test en <AddCategory />', () => {
   test('debe de cambiar el valor en la caja de texto', () => {

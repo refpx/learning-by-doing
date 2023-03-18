@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AddCategory, GifGrid } from './components'
 
-function App() {
+function App () {
   const [categories, setCategories] = useState(['valorant'])
 
   const handleAddCategory = (newCategory) => {

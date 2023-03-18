@@ -1,4 +1,5 @@
-import { getGifs } from "../../src/helpers/getGifs"
+/* globals describe, expect, test */
+import { getGifs } from '../../src/helpers/getGifs'
 
 describe('Test en getGifs()', () => {
   test('debe de retornar un arreglo de gifs', async () => {
