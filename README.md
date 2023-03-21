@@ -1,24 +1,7 @@
 <a name="readme-top"></a>
 
 <p align="center">
-  <a href="#astro">
-    <img src="https://skillicons.dev/icons?i=astro" />
-  </a>
-  <a href="#golang">
-    <img src="https://skillicons.dev/icons?i=go" />
-  </a>
-  <a href="#next-js">
-    <img src="https://skillicons.dev/icons?i=next" />
-  </a>
-  <a href="#node-js">
-    <img src="https://skillicons.dev/icons?i=nodejs" />
-  </a>
-  <a href="#react-js">
-    <img src="https://skillicons.dev/icons?i=react" />
-  </a>
-  <a href="#svelte">
-    <img src="https://skillicons.dev/icons?i=svelte" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=astro,go,next,nodejs,react,svelte" />
   <hr />
   <h2 align="center">Learning by doing</h2>
 </p>
