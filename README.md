@@ -10,6 +10,6 @@ ___
 
 ## React JS 
 
-* [2023-03-20] GifApp: aplicación para obtener gifs / [code](https://github.com/refpx/learning-by-doing/tree/main/code/reactjs/2023-03-20-gif-app) / [demo](https://lbd-gifapp.netlify.app/){:target="_blank"}
+* [2023-03-20] GifApp: aplicación para obtener gifs / <a href="https://github.com/refpx/learning-by-doing/tree/main/code/reactjs/2023-03-20-gif-app" target="_blank">code</a> / <a href="https://lbd-gifapp.netlify.app/" target="_blank">demo</a>
 
 <p align="right">(<a target="_blank" href="#readme-top">⬆️ back to top</a>)</p>
