@@ -1,6 +1,6 @@
 import { TodoItem } from './TodoItem'
 
-export function TodoList ({ todos = [], handleDeleteTodo }) {
+export function TodoList ({ todos = [], handleDeleteTodo, handleToggleTodo }) {
   return (
     <ul className='list-group'>
       {
@@ -9,6 +9,7 @@ export function TodoList ({ todos = [], handleDeleteTodo }) {
             key={todo.id}
             todo={todo}
             handleDeleteTodo={handleDeleteTodo}
+            handleToggleTodo={handleToggleTodo}
           />
         ))
       }

@@ -43,6 +43,14 @@ export default function TodoApp () {
     })
   }
 
+  const handleToggleTodo = (todoId) => {
+    console.log(todoId)
+    dispatch({
+      type: 'toggle',
+      payload: todoId
+    })
+  }
+
   return (
     <>
       <h1>TodoApp 10, <small>pending: 2</small></h1>
@@ -50,7 +58,11 @@ export default function TodoApp () {
 
       <div className='row'>
         <div className='col-7'>
-          <TodoList todos={todos} handleDeleteTodo={handleDeleteTodo} />
+          <TodoList
+            todos={todos}
+            handleDeleteTodo={handleDeleteTodo}
+            handleToggleTodo={handleToggleTodo}
+          />
         </div>
         <div className='col-5'>
           <h4 className='mt-0 text-center'>Add TODO</h4>
