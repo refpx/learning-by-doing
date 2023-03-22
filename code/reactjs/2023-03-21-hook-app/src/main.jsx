@@ -10,7 +10,8 @@ import './index.css'
 // import FocusScreen from './04-useRef/FocusScreen'
 // import { Layout } from './05-useLayoutEffect/Layout'
 // import Memorize from './06-memos/Memorize'
-import MemorizeHook from './06-memos/MemorizeHook'
+// import MemorizeHook from './06-memos/MemorizeHook'
+import CallbackHook from './06-memos/CallbackHook'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   // <FocusScreen />
   // <Layout />
   // <Memorize />
-  <MemorizeHook />
+  // <MemorizeHook />
+  <CallbackHook />
   // </React.StrictMode>
 )
