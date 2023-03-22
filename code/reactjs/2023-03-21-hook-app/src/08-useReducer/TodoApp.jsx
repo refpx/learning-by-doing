@@ -1,59 +1,13 @@
-/* globals localStorage */
-import { useReducer, useEffect } from 'react'
 import { TodoList } from './TodoList'
 import { TodoForm } from './TodoForm'
-import { todoReducer } from './todoReducer'
-
-const initialState = [
-  /* {
-    id: new Date().getTime(),
-    desc: 'Aprender ReactJS',
-    done: false
-  },
-  {
-    id: new Date().getTime() + 100,
-    desc: 'Aprender MongoDB',
-    done: false
-  } */
-]
-
-const init = () => {
-  return JSON.parse(localStorage.getItem('todos')) || []
-}
+import { useTodo } from '../hooks/useTodo'
 
 export default function TodoApp () {
-  const [todos, dispatch] = useReducer(todoReducer, initialState, init)
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos])
-
-  const handleNewTodo = (todo) => {
-    const action = {
-      type: 'add',
-      payload: todo
-    }
-    dispatch(action)
-  }
-
-  const handleDeleteTodo = (todoId) => {
-    dispatch({
-      type: 'delete',
-      payload: todoId
-    })
-  }
-
-  const handleToggleTodo = (todoId) => {
-    console.log(todoId)
-    dispatch({
-      type: 'toggle',
-      payload: todoId
-    })
-  }
+  const { todos, todosCount, todosPending, handleDeleteTodo, handleNewTodo, handleToggleTodo } = useTodo()
 
   return (
     <>
-      <h1>TodoApp 10, <small>pending: 2</small></h1>
+      <h1>TodoApp {todosCount}, <small>pending: {todosPending}</small></h1>
       <hr />
 
       <div className='row'>
@@ -70,7 +24,6 @@ export default function TodoApp () {
           <TodoForm handleNewTodo={handleNewTodo} />
         </div>
       </div>
-
     </>
   )
 }
