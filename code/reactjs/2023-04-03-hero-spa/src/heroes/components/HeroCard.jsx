@@ -29,7 +29,7 @@ export function HeroCard ({ id, superhero, alter_ego: alterEgo, first_appearance
                 <small className='text-muted'>{firstAppearance}</small>
               </p>
 
-              <Link to={`hero ${id}`}>
+              <Link to={`/hero/${id}`}>
                 Más información...
               </Link>
             </div>
