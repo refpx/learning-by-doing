@@ -1,6 +1,8 @@
+import { AppRouter } from './router/AppRouter'
+
 function App () {
   return (
-    <h1>Hero App</h1>
+    <AppRouter />
   )
 }
 export default App
