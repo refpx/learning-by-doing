@@ -9,6 +9,6 @@
 
 | Fecha | Descripción | :zap: | :computer: |
 | ----- | :---------- | ----- | ---------- |
-| 2023-03-20 | GifApp: aplicación para obtener gifs. | [code](https://github.com/refpx/learning-by-doing/tree/main/code/reactjs/2023-03-20-gif-app) | [demo](https://lbd-gifapp.netlify.app/) |
+| yyyy/mm/dd | Próximamente. | [code](#) | [demo](#) |
 
 <p align="right">(<a target="_blank" href="#readme-top">⬆️ back to top</a>)</p>
