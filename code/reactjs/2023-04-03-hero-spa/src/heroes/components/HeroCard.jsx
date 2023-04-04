@@ -12,7 +12,7 @@ export function HeroCard ({ id, superhero, alter_ego: alterEgo, first_appearance
   // const characterByHero = (<p className='card-text'>{characters}</p>)
 
   return (
-    <div className='col'>
+    <div className='col scale-up-center'>
       <div className='card'>
         <div className='row no-gutters'>
           <div className='col-4'>

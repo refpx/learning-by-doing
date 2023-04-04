@@ -1,11 +1,12 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { getHeroById } from '../helpers'
+import { useMemo } from 'react'
 
 export function HeroPage () {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  const hero = getHeroById(id)
+  const hero = useMemo(() => getHeroById(id), [id])
 
   const handleNavigateBack = () => {
     navigate(-1)
@@ -21,7 +22,7 @@ export function HeroPage () {
         <img
           src={`/assets/heroes/${id}.jpg`}
           alt={hero.superhero}
-          className='img-thumbnail'
+          className='img-thumbnail slide-left'
         />
       </div>
 
