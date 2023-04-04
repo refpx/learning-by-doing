@@ -108,7 +108,6 @@ body {
     "Helvetica Neue", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
     sans-serif;
   line-height: 1.4;
-  max-width: 800px;
   word-wrap: break-word;
   color: #363636;
   color: var(--text-main);
