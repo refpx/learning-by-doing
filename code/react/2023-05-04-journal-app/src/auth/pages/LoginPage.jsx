@@ -5,7 +5,7 @@ import { AuthLayout } from '../layout/AuthLayout'
 
 export function LoginPage () {
   return (
-    <AuthLayout title='Login'>
+    <AuthLayout title='Sign in'>
       <form>
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
@@ -27,7 +27,7 @@ export function LoginPage () {
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
             <Grid item xs={12} sm={6}>
               <Button variant='contained' fullWidth>
-                Login
+                Sign in
               </Button>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -38,8 +38,9 @@ export function LoginPage () {
             </Grid>
           </Grid>
           <Grid container direction='row' justifyContent='end'>
+            <Typography sx={{ mr: 1 }}>Don't have an account?</Typography>
             <Link component={RouterLink} color='inherit' to='/auth/register'>
-              Crear una cuenta
+              Sign Up
             </Link>
           </Grid>
         </Grid>
