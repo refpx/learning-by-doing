@@ -100,7 +100,7 @@ export function NoteView () {
           sx={{ border: 'none', borderRadius: 0, mb: 1 }}
         />
       </Grid>
-      <ImageGallery />
+      <ImageGallery images={note.imageUrls} />
     </Grid>
   )
 }
