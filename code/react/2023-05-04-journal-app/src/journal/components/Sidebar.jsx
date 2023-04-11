@@ -25,10 +25,7 @@ export function Sidebar ({ drawerWidth = 240 }) {
         <Divider />
 
         <List>
-          {
-            notes.map((note) => <SidebarItem key={note.id} {...note} />
-            )
-          }
+          {notes.map((note) => <SidebarItem key={note.id} {...note} />)}
         </List>
       </Drawer>
     </Box>
