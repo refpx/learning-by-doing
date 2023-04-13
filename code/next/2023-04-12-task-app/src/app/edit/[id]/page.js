@@ -1,6 +1,4 @@
-function page({params}) {
-  return (
-    <div>edit id: {params.id}</div>
-  )
+function Page({ params }) {
+  return <div>edit id: {params.id}</div>
 }
-export default page
+export default Page

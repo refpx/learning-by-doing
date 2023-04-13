@@ -1,6 +1,16 @@
-function page() {
+'use client'
+
+import { useState } from 'react'
+
+function Page() {
+  const [task, setTask] = useState()
+
   return (
-    <div>new page</div>
+    <form>
+      <input placeholder='Some title' />
+      <textarea placeholder='Some awesome description...' />
+      <button>Save</button>
+    </form>
   )
 }
-export default page
+export default Page

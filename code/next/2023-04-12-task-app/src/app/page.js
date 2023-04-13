@@ -3,8 +3,7 @@
 import TaskCard from '@/components/TaskCard'
 import { useTasks } from '@/context/TasksContext'
 
-function page() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+function Page() {
   const { tasks } = useTasks()
 
   return (
@@ -16,4 +15,4 @@ function page() {
     </div>
   )
 }
-export default page
+export default Page
