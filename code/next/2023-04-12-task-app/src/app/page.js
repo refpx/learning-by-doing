@@ -8,7 +8,6 @@ function Page() {
 
   return (
     <div>
-      <h1>Tasks</h1>
       {tasks.map((task) => (
         <TaskCard key={task.id} task={task} />
       ))}
