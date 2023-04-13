@@ -7,28 +7,7 @@ export const TaskContext = createContext()
 
 // 2. Create a provider to wrap the app
 export const TaskProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: 'Task 1',
-      description: 'Description 1',
-    },
-    {
-      id: 2,
-      title: 'Task 2',
-      description: 'Description 2',
-    },
-    {
-      id: 3,
-      title: 'Task 3',
-      description: 'Description 3',
-    },
-    {
-      id: 4,
-      title: 'Task 4',
-      description: 'Description 4',
-    },
-  ])
+  const [tasks, setTasks] = useState([])
 
   const createTask = (title, description) =>
     setTasks([...tasks, { id: tasks.length + 1, title, description }])
@@ -36,8 +15,16 @@ export const TaskProvider = ({ children }) => {
   const deleteTask = (id) =>
     setTasks([...tasks.filter((task) => task.id !== id)])
 
+  const updateTask = (id, updatedTask) => {
+    setTasks([
+      ...tasks.map((task) =>
+        task.id === parseInt(id) ? { ...task, ...updatedTask } : task
+      ),
+    ])
+  }
+
   return (
-    <TaskContext.Provider value={{ tasks, createTask, deleteTask }}>
+    <TaskContext.Provider value={{ tasks, createTask, deleteTask, updateTask }}>
       {children}
     </TaskContext.Provider>
   )
