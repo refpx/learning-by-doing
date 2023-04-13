@@ -1,6 +1,6 @@
 function page() {
   return (
-    <div>home page</div>
+    <div>new page</div>
   )
 }
 export default page
