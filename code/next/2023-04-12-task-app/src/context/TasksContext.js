@@ -1,13 +1,13 @@
 'use client' // this is a client-side only file
 
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 // 1. Create a context
 export const TaskContext = createContext()
 
 // 2. Create a provider to wrap the app
 export const TaskProvider = ({ children }) => {
-  const tasks = [
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       title: 'Task 1',
@@ -28,10 +28,15 @@ export const TaskProvider = ({ children }) => {
       title: 'Task 4',
       description: 'Description 4',
     },
-  ]
+  ])
+
+  const createTask = (title, description) =>
+    setTasks([...tasks, { id: tasks.length + 1, title, description }])
 
   return (
-    <TaskContext.Provider value={{ tasks }}>{children}</TaskContext.Provider>
+    <TaskContext.Provider value={{ tasks, createTask }}>
+      {children}
+    </TaskContext.Provider>
   )
 }
 
