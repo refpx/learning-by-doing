@@ -39,22 +39,39 @@ function Page({ params }) {
   }, [])
 
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        type='text'
-        placeholder='Some title'
-        {...register('title', { required: true })}
-      />
-      {errors.title && <span>This field is required</span>}
+    <div className='flex justify-center items-center h-full'>
+      <form
+        onSubmit={onSubmit}
+        className='flex flex-col gap-4 bg-gray-700 p-10'
+      >
+        <h1 className='text-2xl'>{params.id ? 'Edit task' : 'Create task'}</h1>
+        <input
+          type='text'
+          placeholder='Some title'
+          {...register('title', { required: true })}
+          className='bg-gray-800 text-white py-2 px-4 w-full focus:outline-none'
+        />
+        {errors.title && (
+          <span className='block text-red-400'>This field is required</span>
+        )}
 
-      <textarea
-        placeholder='Some awesome description...'
-        {...register('description', { required: true })}
-      />
-      {errors.description && <span>This field is required</span>}
+        <textarea
+          placeholder='Some awesome description...'
+          {...register('description', { required: true })}
+          className='bg-gray-800 text-white py-2 px-4 w-full focus:outline-none'
+        />
+        {errors.description && (
+          <span className='block text-red-400'>This field is required</span>
+        )}
 
-      <button type='submit'>Save</button>
-    </form>
+        <button
+          type='submit'
+          className='bg-green-700 hover:bg-green-600 text-white px-3 py-1 rounded-md'
+        >
+          Save
+        </button>
+      </form>
+    </div>
   )
 }
 export default Page

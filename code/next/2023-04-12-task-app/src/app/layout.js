@@ -2,6 +2,7 @@ import { TaskProvider } from '@/context/TasksContext'
 import { Toaster } from './Toaster'
 import Navbar from '@/components/Navbar'
 import './globals.css'
+import { Layout } from '@/components/Layout'
 
 export const metadata = {
   title: 'Task App',
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
         <TaskProvider>
           <Toaster richColors />
           <Navbar />
-          {children}
+          <Layout>{children}</Layout>
         </TaskProvider>
       </body>
     </html>
