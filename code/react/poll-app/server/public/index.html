@@ -26,6 +26,10 @@
     <script>
       // Conexión con el socket server
       const socket = io('http://localhost:8080')
+
+      socket.on('current-bands', (data) => {
+        console.log(data)
+      })
     </script>
   </body>
 </html>
