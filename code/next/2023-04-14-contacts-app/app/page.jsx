@@ -10,10 +10,9 @@ async function Home() {
   const users = await fetchUsers()
 
   return (
-    <div>
-      <h1>Home page</h1>
+    <main className="w-9/12 mx-auto py-4">
       <Users users={users} />
-    </div>
+    </main>
   )
 }
 export default Home
