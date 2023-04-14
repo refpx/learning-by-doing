@@ -1,13 +1,14 @@
 'use client' // this is a client-side only file
 
-import { createContext, useContext, useState } from 'react'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { createContext, useContext } from 'react'
 
 // 1. Create a context
 export const TaskContext = createContext()
 
 // 2. Create a provider to wrap the app
 export const TaskProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useLocalStorage('tasks', [])
 
   const createTask = (title, description) =>
     setTasks([...tasks, { id: tasks.length + 1, title, description }])
