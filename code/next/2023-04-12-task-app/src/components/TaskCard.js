@@ -1,5 +1,6 @@
 import { useTasks } from '@/context/TasksContext'
 import { useRouter } from 'next/navigation'
+import { toast } from 'sonner'
 
 function TaskCard({ task }) {
   const router = useRouter()
@@ -15,6 +16,7 @@ function TaskCard({ task }) {
         onClick={(e) => {
           e.stopPropagation()
           deleteTask(task.id)
+          toast.success('Task deleted successfully')
         }}
       >
         Delete
