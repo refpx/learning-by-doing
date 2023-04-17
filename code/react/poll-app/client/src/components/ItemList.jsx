@@ -1,7 +1,6 @@
 import {
   Badge,
   Button,
-  Card,
   Divider,
   Flex,
   Icon,
@@ -34,7 +33,7 @@ const transactions = [
 
 function ItemList () {
   return (
-    <Card>
+    <>
       <Flex justifyContent='start' className='space-x-2'>
         <Title>List items to vote</Title>
         <Badge color='gray'>8</Badge>
@@ -71,7 +70,7 @@ function ItemList () {
           ))}
         </TableBody>
       </Table>
-    </Card>
+    </>
   )
 }
 export default ItemList
