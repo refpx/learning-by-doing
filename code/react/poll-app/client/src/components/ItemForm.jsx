@@ -1,13 +1,15 @@
 import { Title, TextInput } from '@tremor/react'
 import { useState } from 'react'
+import { useSocket } from '../hooks/useSocket'
 
-function ItemForm ({ onCreateItem }) {
+function ItemForm () {
   const [value, setValue] = useState('')
+  const { socket } = useSocket('http://localhost:8080')
 
   const onSubmit = (event) => {
     event.preventDefault()
     if (value.trim().length > 0) {
-      onCreateItem(value)
+      socket.emit('create-item', { name: value })
       setValue('')
     }
   }
