@@ -24,6 +24,20 @@ function ItemList ({ data }) {
     setItems(data)
   }, [data])
 
+  const handleChangeName = (e, id) => {
+    const newName = e.target.value
+    setItems((prevItems) => prevItems.map(i => {
+      if (i.id === id) {
+        i.name = newName
+      }
+      return i
+    }))
+  }
+
+  const handleBlurName = (id, name) => {
+    console.log(id, name)
+  }
+
   return (
     <>
       <Flex justifyContent='start' className='space-x-2'>
@@ -50,7 +64,12 @@ function ItemList ({ data }) {
                 </Button>
               </TableCell>
               <TableCell>
-                <TextInput placeholder='' defaultValue={item.name} />
+                <TextInput
+                  placeholder=''
+                  value={item.name}
+                  onChange={(e) => handleChangeName(e, item.id)}
+                  onBlur={() => handleBlurName(item.id, item.name)}
+                />
               </TableCell>
               <TableCell className='text-center'>{item.votes}</TableCell>
               <TableCell className='text-center'>
