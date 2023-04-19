@@ -52,6 +52,10 @@ function App () {
     socket.emit('change-item-name', { id, name })
   }
 
+  const onCreateItem = (name) => {
+    socket.emit('create-item', { name })
+  }
+
   return (
     <div className='bg-slate-50 w-screen h-screen'>
       <header className='w-10/12 mx-auto flex justify-end py-4'>
@@ -75,7 +79,7 @@ function App () {
             </Card>
           </Col>
           <Card>
-            <ItemForm />
+            <ItemForm onCreateItem={onCreateItem} />
           </Card>
         </Grid>
       </main>

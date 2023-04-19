@@ -32,6 +32,12 @@ class Sockets {
         this.itemList.updateItemName(id, name)
         this.io.emit('current-items', this.itemList.getItems())
       })
+
+      // Listen to create-item to add a new item
+      socket.on('create-item', ({ name }) => {
+        this.itemList.createItem(name)
+        this.io.emit('current-items', this.itemList.getItems())
+      })
     })
   }
 }
