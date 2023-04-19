@@ -5,9 +5,13 @@ import { StatusOnlineIcon, MinusCircleIcon } from '@heroicons/react/outline'
 import ItemForm from './components/ItemForm'
 import ItemList from './components/ItemList'
 
-const connectSocketServer = () => io.connect('http://localhost:8080', {
-  transports: ['websocket']
-})
+const connectSocketServer = () => {
+  const socket = io.connect('http://localhost:8080', {
+    transports: ['websocket']
+  })
+
+  return socket
+}
 
 function App () {
   const [socket] = useState(connectSocketServer())
