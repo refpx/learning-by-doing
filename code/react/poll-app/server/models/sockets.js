@@ -3,7 +3,7 @@ import ItemList from './item-list.js'
 class Sockets {
   constructor(io) {
     this.io = io
-    this.bandList = new ItemList()
+    this.itemList = new ItemList()
     this.socketEvents()
   }
 
@@ -12,8 +12,8 @@ class Sockets {
     this.io.on('connection', (socket) => {
       console.log('Client connected', socket.id)
 
-      // Emit all bands when a client connects
-      socket.emit('current-bands', this.bandList.getItems())
+      // Emit all items when a client connects
+      socket.emit('current-items', this.itemList.getItems())
     })
   }
 }

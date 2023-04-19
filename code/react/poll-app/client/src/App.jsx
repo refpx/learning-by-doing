@@ -16,6 +16,7 @@ const connectSocketServer = () => {
 function App () {
   const [socket] = useState(connectSocketServer())
   const [status, setStatus] = useState(false)
+  const [items, setItems] = useState([])
 
   useEffect(() => {
     setStatus(socket.connected)
@@ -33,6 +34,13 @@ function App () {
     })
   }, [socket])
 
+  useEffect(() => {
+    socket.on('current-items', (items) => {
+      console.log(items)
+      setItems(items)
+    })
+  }, [socket])
+
   return (
     <div className='bg-slate-50 w-screen h-screen'>
       <header className='w-10/12 mx-auto flex justify-end py-4'>
@@ -47,7 +55,7 @@ function App () {
         <Grid numCols={3} className='gap-2'>
           <Col numColSpan={2}>
             <Card>
-              <ItemList />
+              <ItemList data={items} />
             </Card>
           </Col>
           <Card>

@@ -15,23 +15,15 @@ import {
 } from '@tremor/react'
 
 import { TrashIcon } from '@heroicons/react/outline'
+import { useEffect, useState } from 'react'
 
-const transactions = [
-  {
-    id: '#123456',
-    votes: '12'
-  },
-  {
-    id: '#234567',
-    votes: '13'
-  },
-  {
-    id: '#345678',
-    votes: '14'
-  }
-]
+function ItemList ({ data }) {
+  const [items, setItems] = useState(data)
 
-function ItemList () {
+  useEffect(() => {
+    setItems(data)
+  }, [data])
+
   return (
     <>
       <Flex justifyContent='start' className='space-x-2'>
@@ -50,7 +42,7 @@ function ItemList () {
         </TableHead>
 
         <TableBody>
-          {transactions.map((item) => (
+          {items.map((item) => (
             <TableRow key={item.id}>
               <TableCell>
                 <Button size='xs' variant='primary' color='blue'>
@@ -58,7 +50,7 @@ function ItemList () {
                 </Button>
               </TableCell>
               <TableCell>
-                <TextInput placeholder='' />
+                <TextInput placeholder='' defaultValue={item.name} />
               </TableCell>
               <TableCell className='text-center'>{item.votes}</TableCell>
               <TableCell className='text-center'>
