@@ -3,6 +3,7 @@ import { StatusOnlineIcon, MinusCircleIcon } from '@heroicons/react/outline'
 import ItemForm from './components/ItemForm'
 import ItemList from './components/ItemList'
 import { useSocketContext } from './context/SocketContext'
+import ItemChart from './components/ItemChart'
 
 function App () {
   // const [items, setItems] = useState([])
@@ -20,6 +21,9 @@ function App () {
 
       <main className='w-10/12 mx-auto'>
         <Grid numCols={3} className='gap-2'>
+          <Col numColSpan={3}>
+            <ItemChart />
+          </Col>
           <Col numColSpan={2}>
             <Card>
               <ItemList />
