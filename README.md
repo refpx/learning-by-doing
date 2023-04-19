@@ -18,6 +18,6 @@
 | Fecha      | Descripción  | :zap:                                                                               | :computer: |
 | ---------- | :----------- | ----------------------------------------------------------------------------------- | ---------- |
 | 2023/04/14 | Contacts app | [code](https://github.com/refpx/learning-by-doing/tree/main/code/next/contacts-app) | [demo](#)  |
-| 2023/04/12 | Tasks app    | [code](https://github.com/refpx/learning-by-doing/tree/main/code/next/task-app)     | [demo](#)  |
+| 2023/04/12 | Tasks app    | [code](https://github.com/refpx/learning-by-doing/tree/main/code/next/tasks-app)    | [demo](#)  |
 
 <p align="right">(<a target="_blank" href="#readme-top">⬆️ back to top</a>)</p>
