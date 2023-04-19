@@ -1,32 +1,12 @@
-import { useEffect, useState } from 'react'
 import { Card, Grid, Col, Badge } from '@tremor/react'
 import { StatusOnlineIcon, MinusCircleIcon } from '@heroicons/react/outline'
 import ItemForm from './components/ItemForm'
 import ItemList from './components/ItemList'
-import { useSocket } from './hooks/useSocket'
 import { useSocketContext } from './context/SocketContext'
 
 function App () {
   // const [items, setItems] = useState([])
   const { status } = useSocketContext()
-
-  // useEffect(() => {
-  //   socket.on('current-items', (items) => {
-  //     setItems(items)
-  //   })
-  // }, [socket])
-
-  // const vote = (id) => {
-  //   socket.emit('vote-item', id)
-  // }
-
-  // const deleteItem = (id) => {
-  //   socket.emit('delete-item', id)
-  // }
-
-  // const onChangeItemName = (id, name) => {
-  //   socket.emit('change-item-name', { id, name })
-  // }
 
   return (
     <div className='bg-slate-50 w-screen h-screen'>
@@ -42,11 +22,11 @@ function App () {
         <Grid numCols={3} className='gap-2'>
           <Col numColSpan={2}>
             <Card>
-              {/* <ItemList /> */}
+              <ItemList />
             </Card>
           </Col>
           <Card>
-            {/* <ItemForm /> */}
+            <ItemForm />
           </Card>
         </Grid>
       </main>

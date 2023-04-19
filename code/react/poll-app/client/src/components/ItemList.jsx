@@ -16,13 +16,19 @@ import {
 
 import { TrashIcon } from '@heroicons/react/outline'
 import { useEffect, useState } from 'react'
+import { useSocketContext } from '../context/SocketContext'
 
-function ItemList ({ data, vote, deleteItem, onChangeItemName }) {
-  const [items, setItems] = useState(data)
+function ItemList () {
+  const [items, setItems] = useState([])
+  const { socket } = useSocketContext()
 
   useEffect(() => {
-    setItems(data)
-  }, [data])
+    socket.on('current-items', (items) => {
+      setItems(items)
+    })
+
+    return () => socket.off('current-items')
+  }, [socket])
 
   const handleChangeName = (event, id) => {
     const newItemName = event.target.value
@@ -33,8 +39,15 @@ function ItemList ({ data, vote, deleteItem, onChangeItemName }) {
   }
 
   const handleBlurName = (id, name) => {
-    console.log(id, name)
-    onChangeItemName(id, name)
+    socket.emit('change-item-name', { id, name })
+  }
+
+  const handleVote = (id) => {
+    socket.emit('vote-item', id)
+  }
+
+  const handleDelete = (id) => {
+    socket.emit('delete-item', id)
   }
 
   return (
@@ -62,7 +75,7 @@ function ItemList ({ data, vote, deleteItem, onChangeItemName }) {
                   size='xs'
                   variant='primary'
                   color='blue'
-                  onClick={() => vote(item.id)}
+                  onClick={() => handleVote(item.id)}
                 >
                   +1
                 </Button>
@@ -81,7 +94,7 @@ function ItemList ({ data, vote, deleteItem, onChangeItemName }) {
                   size='xs'
                   variant='light'
                   color='red'
-                  onClick={() => deleteItem(item.id)}
+                  onClick={() => handleDelete(item.id)}
                 >
                   <Icon icon={TrashIcon} color='red' />
                 </Button>

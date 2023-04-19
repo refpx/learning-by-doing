@@ -1,10 +1,10 @@
 import { Title, TextInput } from '@tremor/react'
 import { useState } from 'react'
-import { useSocket } from '../hooks/useSocket'
+import { useSocketContext } from '../context/SocketContext'
 
 function ItemForm () {
   const [value, setValue] = useState('')
-  const { socket } = useSocket('http://localhost:8080')
+  const { socket } = useSocketContext()
 
   const onSubmit = (event) => {
     event.preventDefault()
