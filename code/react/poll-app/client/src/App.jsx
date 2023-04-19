@@ -36,7 +36,6 @@ function App () {
 
   useEffect(() => {
     socket.on('current-items', (items) => {
-      console.log(items)
       setItems(items)
     })
   }, [socket])
@@ -47,6 +46,10 @@ function App () {
 
   const deleteItem = (id) => {
     socket.emit('delete-item', id)
+  }
+
+  const onChangeItemName = (id, name) => {
+    socket.emit('change-item-name', { id, name })
   }
 
   return (
@@ -67,6 +70,7 @@ function App () {
                 data={items}
                 vote={vote}
                 deleteItem={deleteItem}
+                onChangeItemName={onChangeItemName}
               />
             </Card>
           </Col>

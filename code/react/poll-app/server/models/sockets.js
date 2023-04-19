@@ -10,7 +10,7 @@ class Sockets {
   socketEvents() {
     // On connection
     this.io.on('connection', (socket) => {
-      console.log('Client connected', socket.id)
+      // console.log('Client connected', socket.id)
 
       // Emit all items when a client connects
       socket.emit('current-items', this.itemList.getItems())
@@ -24,6 +24,12 @@ class Sockets {
       // Listen to delete-item to delete an item
       socket.on('delete-item', (id) => {
         this.itemList.deleteItem(id)
+        this.io.emit('current-items', this.itemList.getItems())
+      })
+
+      // Listen to change-item-name to change an item name
+      socket.on('change-item-name', ({ id, name }) => {
+        this.itemList.updateItemName(id, name)
         this.io.emit('current-items', this.itemList.getItems())
       })
     })
