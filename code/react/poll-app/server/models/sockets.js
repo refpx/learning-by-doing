@@ -14,6 +14,12 @@ class Sockets {
 
       // Emit all items when a client connects
       socket.emit('current-items', this.itemList.getItems())
+
+      // Listen to vote-item to increase votes
+      socket.on('vote-item', (id) => {
+        this.itemList.increaseVotes(id)
+        this.io.emit('current-items', this.itemList.getItems())
+      })
     })
   }
 }

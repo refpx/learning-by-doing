@@ -41,6 +41,11 @@ function App () {
     })
   }, [socket])
 
+  const vote = (id) => {
+    console.log('vote', id)
+    socket.emit('vote-item', id)
+  }
+
   return (
     <div className='bg-slate-50 w-screen h-screen'>
       <header className='w-10/12 mx-auto flex justify-end py-4'>
@@ -55,7 +60,10 @@ function App () {
         <Grid numCols={3} className='gap-2'>
           <Col numColSpan={2}>
             <Card>
-              <ItemList data={items} />
+              <ItemList
+                data={items}
+                vote={vote}
+              />
             </Card>
           </Col>
           <Card>

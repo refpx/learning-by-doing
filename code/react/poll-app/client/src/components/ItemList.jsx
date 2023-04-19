@@ -17,7 +17,7 @@ import {
 import { TrashIcon } from '@heroicons/react/outline'
 import { useEffect, useState } from 'react'
 
-function ItemList ({ data }) {
+function ItemList ({ data, vote }) {
   const [items, setItems] = useState(data)
 
   useEffect(() => {
@@ -59,7 +59,12 @@ function ItemList ({ data }) {
           {items.map((item) => (
             <TableRow key={item.id}>
               <TableCell>
-                <Button size='xs' variant='primary' color='blue'>
+                <Button
+                  size='xs'
+                  variant='primary'
+                  color='blue'
+                  onClick={() => vote(item.id)}
+                >
                   +1
                 </Button>
               </TableCell>
