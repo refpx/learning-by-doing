@@ -42,8 +42,11 @@ function App () {
   }, [socket])
 
   const vote = (id) => {
-    console.log('vote', id)
     socket.emit('vote-item', id)
+  }
+
+  const deleteItem = (id) => {
+    socket.emit('delete-item', id)
   }
 
   return (
@@ -63,6 +66,7 @@ function App () {
               <ItemList
                 data={items}
                 vote={vote}
+                deleteItem={deleteItem}
               />
             </Card>
           </Col>

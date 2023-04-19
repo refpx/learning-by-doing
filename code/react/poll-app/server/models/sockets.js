@@ -20,6 +20,12 @@ class Sockets {
         this.itemList.increaseVotes(id)
         this.io.emit('current-items', this.itemList.getItems())
       })
+
+      // Listen to delete-item to delete an item
+      socket.on('delete-item', (id) => {
+        this.itemList.deleteItem(id)
+        this.io.emit('current-items', this.itemList.getItems())
+      })
     })
   }
 }
