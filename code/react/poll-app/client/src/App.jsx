@@ -1,38 +1,13 @@
 import { useEffect, useState } from 'react'
-import io from 'socket.io-client'
 import { Card, Grid, Col, Badge } from '@tremor/react'
 import { StatusOnlineIcon, MinusCircleIcon } from '@heroicons/react/outline'
 import ItemForm from './components/ItemForm'
 import ItemList from './components/ItemList'
-
-const connectSocketServer = () => {
-  const socket = io.connect('http://localhost:8080', {
-    transports: ['websocket']
-  })
-
-  return socket
-}
+import { useSocket } from './hooks/useSocket'
 
 function App () {
-  const [socket] = useState(connectSocketServer())
-  const [status, setStatus] = useState(false)
   const [items, setItems] = useState([])
-
-  useEffect(() => {
-    setStatus(socket.connected)
-  }, [socket])
-
-  useEffect(() => {
-    socket.on('connect', () => {
-      setStatus(true)
-    })
-  }, [socket])
-
-  useEffect(() => {
-    socket.on('disconnect', () => {
-      setStatus(false)
-    })
-  }, [socket])
+  const { socket, status } = useSocket('http://localhost:8080')
 
   useEffect(() => {
     socket.on('current-items', (items) => {

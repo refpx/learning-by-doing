@@ -10,7 +10,7 @@ class Sockets {
   socketEvents() {
     // On connection
     this.io.on('connection', (socket) => {
-      // console.log('Client connected', socket.id)
+      console.log('Client connected', socket.id)
 
       // Emit all items when a client connects
       socket.emit('current-items', this.itemList.getItems())
