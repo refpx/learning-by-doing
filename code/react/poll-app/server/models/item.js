@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 
-class Band {
+class Item {
   constructor(name) {
     this.id = uuidv4()
     this.name = name
@@ -8,4 +8,4 @@ class Band {
   }
 }
 
-export default Band
+export default Item
