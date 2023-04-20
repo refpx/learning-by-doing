@@ -7,17 +7,17 @@
 
 ## ReactJS
 
-| Fecha      | Descripción | :zap:                               | :computer:                          |
-| ---------- | :---------- | ----------------------------------- | ----------------------------------- |
-| 2023-04-19 | Poll app    | [code][2023-04-19-poll-app-code]    | [demo][2023-04-19-poll-app-demo]    |
-| 2023-04-05 | Journal app | [code][2023-04-05-journal-app-code] | [demo][2023-04-05-journal-app-demo] |
+| Fecha      | Descripción                                      | :zap:                               | :computer:                          |
+| ---------- | :----------------------------------------------- | ----------------------------------- | ----------------------------------- |
+| 2023-04-19 | Poll app to create simple surveys in real time   | [code][2023-04-19-poll-app-code]    | [demo][2023-04-19-poll-app-demo]    |
+| 2023-04-05 | Journal app to keep personal notes with pictures | [code][2023-04-05-journal-app-code] | [demo][2023-04-05-journal-app-demo] |
 
 ## NextJS
 
-| Fecha      | Descripción  | :zap:                                | :computer:                           |
-| ---------- | :----------- | ------------------------------------ | ------------------------------------ |
-| 2023-04-14 | Contacts app | [code][2023-04-14-contacts-app-code] | [demo][2023-04-14-contacts-app-demo] |
-| 2023-04-12 | Tasks app    | [code][2023-04-12-tasks-app-code]    | [demo][2023-04-12-tasks-app-demo]    |
+| Fecha      | Descripción                                                   | :zap:                                | :computer:                           |
+| ---------- | :------------------------------------------------------------ | ------------------------------------ | ------------------------------------ |
+| 2023-04-14 | Contacts app that consumes an API to display user information | [code][2023-04-14-contacts-app-code] | [demo][2023-04-14-contacts-app-demo] |
+| 2023-04-12 | Tasks app that lets you save your tasks to LocalStorage       | [code][2023-04-12-tasks-app-code]    | [demo][2023-04-12-tasks-app-demo]    |
 
 <p align="right">(<a target="_blank" href="#readme-top">⬆️ back to top</a>)</p>
 
