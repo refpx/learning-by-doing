@@ -1,8 +1,17 @@
-interface Props {
-  url: string
-}
+import { Button, Container } from '../styled.components'
+import { ThemeProvider } from 'styled-components'
 
-const Main = ({ url }: Props): JSX.Element => {
-  return <div>{url}</div>
+const Main = (): JSX.Element => {
+  const theme = {
+    primary: true,
+  }
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Button primary>Main</Button>
+      </Container>
+    </ThemeProvider>
+  )
 }
 export default Main
