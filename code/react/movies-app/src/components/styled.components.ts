@@ -1,9 +1,5 @@
 import styled from 'styled-components'
-
-interface Props {
-  height?: number
-  src?: string
-}
+import { Props } from '../interfaces/interfaces'
 
 export const Flex = styled.div<Props>`
   display: flex;

@@ -6,21 +6,7 @@ import {
   Degrade,
 } from '../styled.components'
 import BlackWidow from '../../assets/black-widow.png'
-
-interface Movie {
-  name: string
-  description: string
-  thumbnail: string
-}
-
-interface Item {
-  name: string
-  description: string
-  thumbnail: {
-    path: string
-    extension: string
-  }
-}
+import { Movie, Item } from '../../interfaces/interfaces'
 
 const Carousel = (): JSX.Element => {
   const [data, setData] = useState<Movie[]>([])
