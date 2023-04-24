@@ -1,5 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
 body,
 html {
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.title-info {
+  font-size: 22px;
+  text-align: center;
+}
+
+.details-info {
+  width: 100%;
+  margin: auto;
+}
+
+.details-info .list-info {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.star-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.description {
+  width: 90%;
+  margin: auto;
+}
+
+.description-title {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.description-content {
+  color: #717171;
+  font-size: 12px;
+  text-align: left;
+}
+
+.description-images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-buy {
+  text-align: center;
 }

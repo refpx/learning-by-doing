@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Container } from '../styled.components'
+import {
+  Container,
+  AvatarContainer,
+  Avatar,
+  Degrade,
+} from '../styled.components'
+import BlackWidow from '../../assets/black-widow.png'
 
 interface Movie {
   name: string
@@ -16,7 +22,7 @@ interface Item {
   }
 }
 
-const Carousel = () => {
+const Carousel = (): JSX.Element => {
   const [data, setData] = useState<Movie[]>([])
 
   const getData = async (): Promise<void> => {
@@ -41,9 +47,13 @@ const Carousel = () => {
   return (
     <>
       {data.length > 0 && (
-        <Container height={50} src={data[0].thumbnail}>
-          Carousel
-        </Container>
+        <>
+          <Container height={50} src={data[1].thumbnail} />
+          <AvatarContainer height={50}>
+            <Avatar height={50} src={BlackWidow} />
+          </AvatarContainer>
+          <Degrade height={50} />
+        </>
       )}
     </>
   )
