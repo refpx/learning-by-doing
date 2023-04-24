@@ -2,9 +2,11 @@ import { FaRegPlayCircle, FaStar } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import { ContainerInfo, MiniAvatar, ButtonBuy } from '../styled.components'
 import BlackWidow from '../../assets/black-widow.png'
+import { useAppContext } from '../../context/AppContext'
 
 const Info = () => {
   const navigate = useNavigate()
+  const { state } = useAppContext()
 
   const goToDetails = (): void => {
     navigate('/detail/2')
@@ -15,7 +17,7 @@ const Info = () => {
       <section className='icon-info'>
         <FaRegPlayCircle size={25} color='red' />
       </section>
-      <section className='title-info'>Black Widow</section>
+      <section className='title-info'>{state.name}</section>
       <section className='details-info'>
         <section className='list-info'>
           <div>2020</div>

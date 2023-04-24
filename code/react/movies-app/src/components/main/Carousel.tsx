@@ -32,7 +32,7 @@ const Carousel = (): JSX.Element => {
 
   return (
     <>
-      {data.length > 0 && (
+      {data.length > 0 ? (
         <>
           <Container height={50} src={data[1].thumbnail} />
           <AvatarContainer height={50}>
@@ -40,6 +40,8 @@ const Carousel = (): JSX.Element => {
           </AvatarContainer>
           <Degrade height={50} />
         </>
+      ) : (
+        <section className='loading'>Loading...</section>
       )}
     </>
   )
