@@ -1,4 +1,11 @@
+import Main from './components/main'
+
 function App() {
-  return <div>App</div>
+  const url = import.meta.env.VITE_BASE_URL
+  return (
+    <>
+      <Main url={url} />
+    </>
+  )
 }
 export default App
