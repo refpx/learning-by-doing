@@ -17,3 +17,7 @@ export interface Props {
   height?: number
   src?: string
 }
+
+export interface PropsProvider {
+  children: JSX.Element | JSX.Element[]
+}
