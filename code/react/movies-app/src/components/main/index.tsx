@@ -1,17 +1,13 @@
-import { Button, Container } from '../styled.components'
-import { ThemeProvider } from 'styled-components'
+import { Flex } from '../styled.components'
+import Info from './Info'
+import Carousel from './Carousel'
 
 const Main = (): JSX.Element => {
-  const theme = {
-    primary: true,
-  }
-
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Button primary>Main</Button>
-      </Container>
-    </ThemeProvider>
+    <Flex>
+      <Carousel />
+      <Info />
+    </Flex>
   )
 }
 export default Main

@@ -1,17 +1,23 @@
 import styled from 'styled-components'
 
 interface Props {
-  primary?: boolean
+  height?: number
+  src?: string
 }
 
-export const Button = styled.button<Props>`
-  border: 1px solid #000;
-  padding: 10px;
-  border-radius: 5px;
-  color: red;
-  background-color: ${(props) => (props.primary ? 'blue' : 'green')};
+export const Flex = styled.div<Props>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 export const Container = styled.div<Props>`
-  width: 100%;
-  padding: 50px;
+  margin-top: 50px;
+  height: ${(props) => props.height}vh;
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+  background: url(${(props) => props.src}) no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.5;
 `
