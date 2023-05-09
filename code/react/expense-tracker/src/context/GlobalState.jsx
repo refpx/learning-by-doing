@@ -1,4 +1,5 @@
-import { useReducer, useContext, createContext } from 'react'
+/* eslint-disable no-undef */
+import { useReducer, useContext, createContext, useEffect } from 'react'
 import AppReducer from './AppReducer'
 
 const initialState = {
@@ -16,7 +17,10 @@ export const useGlobalState = () => {
 }
 
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState)
+  const [state, dispatch] = useReducer(AppReducer, initialState, () => {
+    const localData = localStorage.getItem('transactions')
+    return localData ? JSON.parse(localData) : initialState
+  })
 
   const addTransaction = (transaction) => {
     dispatch({
@@ -31,6 +35,10 @@ export const GlobalProvider = ({ children }) => {
       payload: id
     })
   }
+
+  useEffect(() => {
+    localStorage.setItem('transactions', JSON.stringify(state))
+  }, [state])
 
   return (
     <Context.Provider value={{ transactions: state.transactions, addTransaction, deleteTransaction }}>
