@@ -1,3 +1,4 @@
+import { Flex, Text } from '@tremor/react'
 import { useGlobalState } from '../context/GlobalState'
 
 export function Balance () {
@@ -8,9 +9,9 @@ export function Balance () {
   const total = amounts.reduce((acc, item) => (acc += item), 0)
 
   return (
-    <div>
-      <h3>Your Balance</h3>
-      <h1>{total}</h1>
-    </div>
+    <Flex>
+      <Text color='black'>Your Balance</Text>
+      <Text color='black' className='font-extrabold text-xl'>$. {total}</Text>
+    </Flex>
   )
 }

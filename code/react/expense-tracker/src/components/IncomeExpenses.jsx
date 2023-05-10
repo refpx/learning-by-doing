@@ -1,3 +1,4 @@
+import { Flex, Text } from '@tremor/react'
 import { useGlobalState } from '../context/GlobalState'
 
 export function IncomeExpenses () {
@@ -14,15 +15,15 @@ export function IncomeExpenses () {
     .reduce((acc, item) => (acc += item), 0) * -1
 
   return (
-    <>
-      <div>
-        <h4>Income</h4>
-        <p>{income}</p>
-      </div>
-      <div>
-        <h4>Expense</h4>
-        <p>{expense}</p>
-      </div>
-    </>
+    <section>
+      <Flex>
+        <Text color='black'>Income</Text>
+        <Text color='black'>$. {income}</Text>
+      </Flex>
+      <Flex>
+        <Text color='black'>Expense</Text>
+        <Text color='black'>$. {expense}</Text>
+      </Flex>
+    </section>
   )
 }
