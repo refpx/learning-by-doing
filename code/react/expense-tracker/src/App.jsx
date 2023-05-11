@@ -11,7 +11,7 @@ function App () {
     <GlobalProvider>
       <main className='max-w-4xl mx-auto flex items-center justify-center h-screen'>
         <Card className='bg-[#222326] border border-[#222326] ring-0'>
-          <Grid numCols={3} className='gap-2'>
+          <Grid numCols={1} numColsSm={3} className='gap-2'>
             <Col>
               <Card className='bg-[#F2E96D] ring-0 flex flex-col gap-2'>
                 <Text
@@ -26,7 +26,7 @@ function App () {
                 <TransactionForm />
               </Card>
             </Col>
-            <Col numColSpan={2}>
+            <Col numColSpanSm={2}>
               <Card className='ring-0 bg-[#393941]'>
                 <SummaryChart />
                 <TransactionList />
