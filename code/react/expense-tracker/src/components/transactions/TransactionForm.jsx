@@ -10,9 +10,12 @@ export function TransactionForm () {
   const onSubmit = (e) => {
     e.preventDefault()
 
+    if (!description || !amount) return
+
     addTransaction({
       id: window.crypto.randomUUID(),
       description,
+      type: amount < 0 ? 'expense' : 'income',
       amount: +amount
     })
   }

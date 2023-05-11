@@ -6,3 +6,32 @@ body {
   background-color: #5f6a73;
   /* color: #d9d9d9; */
 }
+
+.recharts-wrapper path {
+  stroke: #393941 !important;
+}
+
+.recharts-wrapper svg text {
+  fill: #d9d9d9 !important;
+  font-size: 23px !important;
+}
+
+.recharts-layer g g:first-child path {
+  fill: #f2e96d !important;
+}
+
+.recharts-layer g g:last-child path {
+  fill: #4e4f54 !important;
+}
+
+.tremor-Legend-root li {
+  color: #d9d9d9 !important;
+}
+
+.tremor-Legend-root li:first-child svg {
+  fill: #f2e96d !important;
+}
+
+.tremor-Legend-root li:last-child svg {
+  fill: #4e4f54 !important;
+}

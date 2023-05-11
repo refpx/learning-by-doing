@@ -4,6 +4,7 @@ import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionForm } from './components/transactions/TransactionForm'
 import { TransactionList } from './components/transactions/TransactionList'
 import { GlobalProvider } from './context/GlobalState'
+import { SummaryChart } from './components/SummaryChart'
 
 function App () {
   return (
@@ -27,11 +28,7 @@ function App () {
             </Col>
             <Col numColSpan={2}>
               <Card className='ring-0 bg-[#393941]'>
-                <Text
-                  className='text-3xl font-bold text-[#D9D9D9]'
-                >
-                  History
-                </Text>
+                <SummaryChart />
                 <TransactionList />
               </Card>
             </Col>
