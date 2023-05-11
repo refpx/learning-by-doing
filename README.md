@@ -7,10 +7,11 @@
 
 ## ReactJS
 
-| Fecha      | Descripción                                      | :zap:                               | :computer:                          |
-| ---------- | :----------------------------------------------- | ----------------------------------- | ----------------------------------- |
-| 2023-04-19 | Poll app to create simple surveys in real time   | [code][2023-04-19-poll-app-code]    | [demo][2023-04-19-poll-app-demo]    |
-| 2023-04-05 | Journal app to keep personal notes with pictures | [code][2023-04-05-journal-app-code] | [demo][2023-04-05-journal-app-demo] |
+| Fecha      | Descripción                                                       | :zap:                                   | :computer:                              |
+| ---------- | :---------------------------------------------------------------- | --------------------------------------- | --------------------------------------- |
+| 2023-05-11 | Expense tracker app allows you to keep track of your transactions | [code][2023-05-11-expense-tracker-code] | [demo][2023-05-11-expense-tracker-demo] |
+| 2023-04-19 | Poll app to create simple surveys in real time                    | [code][2023-04-19-poll-app-code]        | [demo][2023-04-19-poll-app-demo]        |
+| 2023-04-05 | Journal app to keep personal notes with pictures                  | [code][2023-04-05-journal-app-code]     | [demo][2023-04-05-journal-app-demo]     |
 
 ## NextJS
 
@@ -23,6 +24,8 @@
 
 <!-- Referencias ReactJS -->
 
+[2023-05-11-expense-tracker-code]: https://github.com/refpx/learning-by-doing/tree/main/code/react/expense-tracker
+[2023-05-11-expense-tracker-demo]: https://expense-tracker-refpx.netlify.app/
 [2023-04-19-poll-app-code]: https://github.com/refpx/learning-by-doing/tree/main/code/react/poll-app
 [2023-04-19-poll-app-demo]: #
 [2023-04-05-journal-app-code]: https://github.com/refpx/learning-by-doing/tree/main/code/react/journal-app
