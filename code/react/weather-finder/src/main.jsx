@@ -8,10 +8,11 @@ import '@fontsource/roboto/700.css'
 
 import './main.css'
 import { CssBaseline } from '@mui/material'
+import { SnackbarProvider } from 'notistack'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
+  <SnackbarProvider>
     <CssBaseline />
     <App />
-  </>
+  </SnackbarProvider>
 )
