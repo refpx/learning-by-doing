@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from '@/components/Navbar'
+
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'User search app',
@@ -15,7 +17,14 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        <div className='h-screen bg-slate-900 grid place-content-center'>
+          <div className='sm:w-[500px] md:w-[600px] lg:w-[700px]'>
+            <Navbar />
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
