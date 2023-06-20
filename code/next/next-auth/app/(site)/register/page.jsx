@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import axios from 'axios'
 
 export default function Register () {
   const [data, setData] = useState({
@@ -11,6 +12,9 @@ export default function Register () {
 
   const registerUser = async e => {
     e.preventDefault()
+    axios.post('/api/register', data)
+      .then(() => alert('User registered'))
+      .catch((error) => alert('An error occurred' + error))
   }
 
   return (
