@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { signIn } from 'next-auth/react'
 
 export default function Login () {
   const [data, setData] = useState({
@@ -10,6 +11,9 @@ export default function Login () {
 
   const loginUser = async e => {
     e.preventDefault()
+    signIn('credentials', { ...data, redirect: false })
+      .then(() => alert('Logged in!'))
+      .catch(() => alert('Failed to login!'))
   }
 
   return (
