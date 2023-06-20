@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
+import { toast } from 'sonner'
 
 export default function Login () {
   const [data, setData] = useState({
@@ -12,8 +13,15 @@ export default function Login () {
   const loginUser = async e => {
     e.preventDefault()
     signIn('credentials', { ...data, redirect: false })
-      .then(() => alert('Logged in!'))
-      .catch(() => alert('Failed to login!'))
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error(callback.error)
+        }
+
+        if (callback?.ok && !callback?.error) {
+          toast.success('User has been logged in!')
+        }
+      })
   }
 
   return (
