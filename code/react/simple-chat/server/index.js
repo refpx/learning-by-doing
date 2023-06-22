@@ -7,10 +7,13 @@ const server = http.createServer(app)
 const io = new SocketServer(server)
 
 io.on('connection', (socket) => {
-  console.log('A user connected')
+  console.log(socket.id)
 
-  socket.on('disconnect', () => {
-    console.log('A user disconnected')
+  socket.on('message', (body) => {
+    socket.broadcast.emit('message', {
+      body,
+      from: socket.id.slice(6)
+    })
   })
 })
 
