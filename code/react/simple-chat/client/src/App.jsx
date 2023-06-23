@@ -28,25 +28,27 @@ const App = () => {
   const receiveMessage = message => setMessages(state => [...state, message])
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='h-screen bg-zinc-800 text-white flex items-center justify-center'>
+      <form onSubmit={handleSubmit} className='bg-zinc-900 p-10'>
+        <h1 className='text-2xl font-bold my-2'>Simple chat</h1>
         <input 
           type="text"
           placeholder='Write a message...'
           onChange={(e) => setMessage(e.target.value)}
+          className='border-2 border-zinc-500 p-2 rounded w-full text-black'
         />
-        <button>Send</button>
+
+        <ul>
+          {
+            messages.map((message, index) => (
+              <li key={index} className={`my-2 p-2 table text-sm rounded-md ${message.from === 'Me' ? 'bg-sky-700 ml-auto' : 'bg-black'}`}>
+                {message.from}: {message.body}
+              </li>
+            ))
+          }
+        </ul>
       </form>
 
-      <ul>
-        {
-          messages.map((message, index) => (
-            <li key={index}>
-              {message.from}: {message.body}
-            </li>
-          ))
-        }
-      </ul>
     </div>
   )
 }
