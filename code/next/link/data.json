@@ -1,0 +1,30 @@
+{
+  "name": "Fredy Romero",
+  "avatar": "https://avatars.githubusercontent.com/u/115015?v=3",
+  "links": [
+    {
+      "title": "My personal site",
+      "href": "#",
+      "image": "https://avatars.githubusercontent.com/u/115015?v=3"
+    },
+    {
+      "title": "My blog",
+      "href": "#",
+      "image": "https://avatars.githubusercontent.com/u/115015?v=3"
+    },
+    {
+      "title": "My blog",
+      "href": "#"
+    }
+  ],
+  "socials": [
+    {
+      "title": "Twitter",
+      "href": "https://twitter.com/refpx_"
+    },
+    {
+      "title": "Github",
+      "href": "https://github.com/refpx"
+    }
+  ]
+}
